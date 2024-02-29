@@ -14,7 +14,7 @@ const Welcome = () => {
       <main>
         <h1>Welcome to Tour360</h1>
         <p>Your ultimate tour guide!</p>
-        <Link href="/tours">Explore Tours</Link>
+        <Link href="/dashboard">Explore Tours</Link>
       </main>
 
     
