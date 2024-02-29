@@ -1,46 +1,239 @@
 import Link from 'next/link';
 import Head from 'next/head';
-import HamburgerMenu from '../hamburgerMenu/page';
+
 
 const Dashboard = () => {
 
   const touristSites = [
-    { name: 'Site 1',
-     image: '/images/Aburi.jpg',
-     },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
+    {
+      name: 'Aburi',
+      image: '/images/Aburi.jpg',
+      location: 'Aburi, Ghana',
+      ratings: 4.5,
+      virtualTour: '/virtual-tour/aburi',
+    },
 
-    { name: 'Site 2', image: '/site2.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    { name: 'Site 3', image: '/site3.jpg' },
-    
+
+
+
+   
   ];
 
 
@@ -69,6 +262,7 @@ const Dashboard = () => {
         <a href="#">Cart</a>
         <a href="#">Notification</a>
         </div>
+      
       </header>
 
       {/* Main Content */}
@@ -76,10 +270,19 @@ const Dashboard = () => {
         <div className="tourist-sites">
           {touristSites.map((site, index) => (
             <div className="tourist-site" key={index}>
-              {/* Use site.image for the actual image */}
-              {/* Placeholder with background color */}
-              <div className="image-placeholder"></div>
-              <p>{site.name}</p>
+              {/* Image */}
+              <div className="image-placeholder">
+                <img src={site.image} alt={site.name} />
+              </div>
+              {/* Name */}
+              <h3>{site.name}</h3>
+              {/* Ratings */}
+              <div className="ratings">{site.ratings} Stars</div>
+              {/* Location */}
+              <div className="location">{site.location}</div>
+              
+              
+            
             </div>
           ))}
         </div>
@@ -153,16 +356,17 @@ const Dashboard = () => {
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
           gap: 20px;
+          
         }
         .tourist-site {
           border: 1px solid #ccc;
-          padding: 10px;
+          padding: 2px;
           text-align: center;
         }
 
 
         .image-placeholder {
-          width: 100%;
+          width: 200px;
           height: 150px;
           background-color: #f0f0f0; 
         }

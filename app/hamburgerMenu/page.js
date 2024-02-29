@@ -1,8 +1,12 @@
 
-import { useState } from 'next';
+
+import React from 'react';
+import { useClient } from 'next/client'; // Import the useClient hook
+
 
 const HamburgerMenu = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  // Use the useClient hook to wrap useState
+  const [isOpen, setIsOpen] = useClient(() => useState(false));
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
