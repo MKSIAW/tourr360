@@ -2,6 +2,44 @@
 import Head from 'next/head';
 
 const Dashboard = () => {
+
+  const touristSites = [
+    { name: 'Site 1', image: '/images/Aburi.jpg' },
+    { name: 'Site 2', image: '/site2.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    { name: 'Site 3', image: '/site3.jpg' },
+    
+  ];
+
+
   return (
     <div className="dashboard-container">
       <Head>
@@ -10,10 +48,11 @@ const Dashboard = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      {/* Navbar */}
       <header className="navbar">
         <div className="navbar-brand">
           <span className="app-name">Tour360</span>
-          <img src="/profile-icon.png" alt="Profile Icon" className="profile-icon" />
+          <img src="/images/dobiison-virtual-tour-logo.webp" alt="Profile Icon" className="profile-icon" />
         </div>
         <div className="navbar-links">
           <a href="#">Sign In</a>
@@ -24,14 +63,22 @@ const Dashboard = () => {
         </div>
       </header>
 
+      {/* Main Content */}
       <main className="main-content">
-        {/* Placeholder for images */}
-        <div className="image-placeholder">
-          {/* Add your images here */}
+        <div className="tourist-sites">
+          {touristSites.map((site, index) => (
+            <div className="tourist-site" key={index}>
+              {/* Use site.image for the actual image */}
+              {/* Placeholder with background color */}
+              <div className="image-placeholder"></div>
+              <p>{site.name}</p>
+            </div>
+          ))}
         </div>
-        <button className="virtual-tour-button">Take Virtual Tour</button>
+        
       </main>
 
+      {/* Footer */}
       <footer className="footer">
         <div className="footer-links">
           <a href="#">About Us</a>
@@ -40,7 +87,95 @@ const Dashboard = () => {
         </div>
       </footer>
 
-     
+      <style js>{`
+        .dashboard-container {
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+        }
+
+        .navbar {
+          background-color: #0070f3;
+          color: white;
+          padding: 10px 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .navbar-brand {
+          display: flex;
+          align-items: center;
+        }
+
+        .app-name {
+          font-size: 1.5rem;
+          margin-right: 10px;
+        }
+
+        .navbar-links {
+          display: flex;
+          align-items: center;
+        }
+
+        .navbar-links a {
+          color: white;
+          text-decoration: none;
+          margin-right: 10px;
+        }
+
+        .main-content {
+          flex-grow: 1;
+          padding: 20px;
+        }
+        .tourist-sites {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          gap: 20px;
+        }
+        .tourist-site {
+          border: 1px solid #ccc;
+          padding: 10px;
+          text-align: center;
+        }
+
+
+        .image-placeholder {
+          width: 100%;
+          height: 150px;
+          background-color: #f0f0f0; 
+        }
+
+        .virtual-tour-button {
+          background-color: #0070f3;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          font-size: 1rem;
+          border-radius: 5px;
+          cursor: pointer;
+          margin-top: 20px;
+        }
+
+        .virtual-tour-button:hover {
+          background-color: #0053aa;
+        }
+
+        .footer {
+          background-color: #0070f3;
+          padding: 20px;
+          text-align: center;
+        }
+
+        .footer-links a {
+          color: white;
+          text-decoration: none;
+          margin-right: 10px;
+        }
+        .profile-icon{
+         width: 50px;
+        }
+      `}</style>
     </div>
   );
 }
