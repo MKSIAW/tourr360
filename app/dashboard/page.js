@@ -4,6 +4,9 @@ import Head from 'next/head';
 
 const Dashboard = () => {
 
+
+  
+
   const touristSites = [
     {
       name: 'Aburi',
@@ -253,14 +256,20 @@ const Dashboard = () => {
       <header className="navbar">
         <div className="navbar-brand">
           <span className="app-name">Tour360</span>
+
           <img src="/images/dobiison-virtual-tour-logo.webp" alt="Profile Icon" className="profile-icon" />
         </div>
+
         <div className="navbar-links">
         <input type="text" placeholder="Search..." className="search-input" />
-        <a href="#">Sign In</a>
-        <a href="#">Settings</a>
-        <a href="#">Cart</a>
-        <a href="#">Notification</a>
+
+        <button className="sign-in-button">
+            <Link href="/signin">Sign In</Link>
+          </button>
+
+        <Link href="/settings">Settings</Link>
+        <Link href="/cart">Cart</Link>
+        <Link href="/profile">Profile</Link>
         </div>
       
       </header>
@@ -293,7 +302,7 @@ const Dashboard = () => {
       <footer className="footer">
         <div className="footer-links">
         <Link href="/about">About Us</Link>
-          <Link href="/contact">Contact Us</Link>
+        <Link href="/contact">Contact Us</Link>
           <a href="#">Social Media</a>
         </div>
 
@@ -347,6 +356,20 @@ const Dashboard = () => {
           text-decoration: none;
           margin-right: 10px;
         }
+        .sign-in-button {
+          background-color: #0070f3;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 20px;
+          cursor: pointer;
+          text-decoration: none; /* Remove default underline */
+        }
+
+        .sign-in-button:hover {
+          background-color: #0053aa;
+        }
+
 
         .main-content {
           flex-grow: 1;
@@ -391,11 +414,24 @@ const Dashboard = () => {
           padding: 20px;
           text-align: center;
         }
+        
+          .footer-links {
+            margin-bottom: 20px; /* Add margin between links and copyright */
+          }
+        
 
         .footer-links a {
           color: white;
           text-decoration: none;
-          margin-right: 10px;
+          margin-right: 40px;
+        }
+        .copyright {
+          margin-top: 10px; /* Add margin above copyright */
+        }
+      
+        .copyright p {
+          color: #fff;
+          font-size: 0.9rem;
         }
         .profile-icon{
          width: 50px;
