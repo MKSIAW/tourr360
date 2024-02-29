@@ -19,7 +19,7 @@ const Welcome = () => {
 
       <style js>{`
        .welcome-container {
-        background-image: url('/images/background1.jpg');
+        background-image: url('/images/welcome.jpg');
         background-size: cover;
         background-position: center;
         min-height: 100vh;
@@ -32,6 +32,7 @@ const Welcome = () => {
       main {
         text-align: center;
         color: white;
+       
       }
 
       .animated-heading {
@@ -50,12 +51,12 @@ const Welcome = () => {
       }
 
       h1 {
-        font-size: 3rem;
+        font-size: 5rem;
         margin-bottom: 1rem;
       }
 
       p {
-        font-size: 1.5rem;
+        font-size: 3rem;
         margin-bottom: 2rem;
       }
 

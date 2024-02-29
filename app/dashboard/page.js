@@ -1,10 +1,14 @@
-
+import Link from 'next/link';
 import Head from 'next/head';
+import HamburgerMenu from '../hamburgerMenu/page';
 
 const Dashboard = () => {
 
   const touristSites = [
-    { name: 'Site 1', image: '/images/Aburi.jpg' },
+    { name: 'Site 1',
+     image: '/images/Aburi.jpg',
+     },
+
     { name: 'Site 2', image: '/site2.jpg' },
     { name: 'Site 3', image: '/site3.jpg' },
     { name: 'Site 3', image: '/site3.jpg' },
@@ -40,6 +44,8 @@ const Dashboard = () => {
   ];
 
 
+
+
   return (
     <div className="dashboard-container">
       <Head>
@@ -48,6 +54,8 @@ const Dashboard = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      
+
       {/* Navbar */}
       <header className="navbar">
         <div className="navbar-brand">
@@ -55,11 +63,11 @@ const Dashboard = () => {
           <img src="/images/dobiison-virtual-tour-logo.webp" alt="Profile Icon" className="profile-icon" />
         </div>
         <div className="navbar-links">
-          <a href="#">Sign In</a>
-          <a href="#">Search</a>
-          <a href="#">Settings</a>
-          <a href="#">Cart</a>
-          <a href="#">Notification</a>
+        <input type="text" placeholder="Search..." className="search-input" />
+        <a href="#">Sign In</a>
+        <a href="#">Settings</a>
+        <a href="#">Cart</a>
+        <a href="#">Notification</a>
         </div>
       </header>
 
@@ -81,10 +89,15 @@ const Dashboard = () => {
       {/* Footer */}
       <footer className="footer">
         <div className="footer-links">
-          <a href="#">About Us</a>
-          <a href="#">Contact Us</a>
+        <Link href="/about">About Us</Link>
+          <Link href="/contact">Contact Us</Link>
           <a href="#">Social Media</a>
         </div>
+
+        <div className="copyright">
+        <p>&copy; {new Date().getFullYear()} Tour360. All rights reserved.</p>
+      </div>
+
       </footer>
 
       <style js>{`
@@ -107,6 +120,14 @@ const Dashboard = () => {
           display: flex;
           align-items: center;
         }
+        .search-input {
+          padding: 5px;
+          border: none;
+          border-radius: 5px;
+          margin-right: 10px;
+          width: 200px; /* Adjust width as needed */
+        }
+
 
         .app-name {
           font-size: 1.5rem;
@@ -179,5 +200,6 @@ const Dashboard = () => {
     </div>
   );
 }
+
 
 export default Dashboard;
