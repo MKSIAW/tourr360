@@ -267,7 +267,7 @@ const Dashboard = () => {
             <Link href="/signin">Sign In</Link>
           </button>
 
-        <Link href="/settings">Settings</Link>
+        <Link href="/settings">Settings</Link>n
         <Link href="/cart">Cart</Link>
         <Link href="/profile">Profile</Link>
         </div>
