@@ -10,7 +10,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchTouristSites = async () => {
       try {
-        // Adjust the URL to your WordPress site's REST API endpoint
+        
         const response = await axios.get('http://localhost/wordpress/wp-json/wp/v2/tour-site?acf_format=standard&_fields=id,title,acf');
         setTouristSites(response.data.map(site => ({
           name: site.title.rendered,
