@@ -14,6 +14,8 @@ const Dashboard = () => {
         const response = await axios.get('http://localhost/wordpress/wp-json/wp/v2/tour-site?acf_format=standard&_fields=id,title,acf');
         setTouristSites(response.data.map(site => ({
           name: site.title.rendered,
+          image: site.acf.image, // Ensure your WordPress site exposes this field. site.acf....
+          location: site.acf.location, // Assuming you use ACF to add custom fields
          
         })));
       } catch (error) {
