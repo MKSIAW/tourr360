@@ -13,6 +13,7 @@ const Dashboard = () => {
         
         const response = await axios.get('http://localhost/wordpress/wp-json/wp/v2/tour-site?acf_format=standard&_fields=id,title,acf');
         setTouristSites(response.data.map(site => ({
+          id: site.id,
           name: site.title.rendered,
           image: site.acf.image, // Ensure your WordPress site exposes this field. site.acf....
           location: site.acf.location, // Assuming you use ACF to add custom fields
@@ -52,20 +53,20 @@ const Dashboard = () => {
         </div>
       </header>
 
-      {/* Main Content */}
-      <main className="flex-grow p-5">
+        {/* Main Content */}
+        <main className="flex-grow p-5">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {touristSites.map((site, index) => (
-            <div className="border border-gray-300 p-2 text-center" key={index}>
-              {/* Image */}
-              <img src={site.image} alt={site.name} className="w-full h-40 object-cover" />
-              {/* Name */}
-              <h3 className="font-semibold text-lg">{site.name}</h3>
-              {/* Ratings */}
-              <div className="text-yellow-500">{site.ratings} Stars</div>
-              {/* Location */}
-              <div>{site.location}</div>
-            </div>
+          {touristSites.map(site => (
+            <Link key={site.id} href={`/VirtualTour/${site.id}`}>
+              <id className="border border-gray-300 p-2 text-center">
+                {/* Image */}
+                <img src={site.image} alt={site.name} className="w-full h-40 object-cover" />
+                {/* Name */}
+                <h3 className="font-semibold text-lg">{site.name}</h3>
+                {/* Location */}
+                <div>{site.location}</div>
+              </id>
+            </Link>
           ))}
         </div>
       </main>
