@@ -2,119 +2,54 @@ import Head from 'next/head';
 
 const About = () => {
   return (
-    <div className="about-container">
+    <div className="flex flex-col min-h-screen">
       <Head>
         <title>About Us - Tour360</title>
         <meta name="description" content="Learn more about Tour360 - Your ultimate tour guide!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header>
-        <h1>About Us</h1>
+      {/* Header */}
+      <header className="bg-blue-500 text-white py-4">
+        <div className="container mx-auto">
+          <h1 className="text-3xl font-semibold text-center">About Us</h1>
+        </div>
       </header>
 
-      <main>
-        <section className="about-section">
-          <h2>Our Mission</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
-        </section>
+      {/* Main content */}
+      <main className="flex-grow">
+        <div className="container mx-auto py-8 px-4">
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
+            <p className="text-lg">Welcome to Tour360, your ultimate guide to exploring the captivating beauty and rich culture of Ghana from the comfort of your home. At Tour360, we are passionate about bringing the wonders of this vibrant country to life through immersive virtual tours.</p>
+            {/* Add more content here */}
+          </section>
 
-        <section className="about-section">
-          <h2>Our Team</h2>
-          <div className="team-members">
-            <div className="team-member">
-              <img src="/images/team-member1.jpg" alt="Team Member 1" />
-              <h3>John Doe</h3>
-              <p>CEO</p>
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold mb-4">Our Team</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="team-member">
+                <img src="/images/team-member1.jpg" alt="Team Member 1" className="w-32 h-32 mx-auto rounded-full mb-4" />
+                <h3 className="text-xl font-semibold">John Doe</h3>
+                <p className="text-gray-600">CEO</p>
+              </div>
+              <div className="team-member">
+                <img src="/images/team-member2.jpg" alt="Team Member 2" className="w-32 h-32 mx-auto rounded-full mb-4" />
+                <h3 className="text-xl font-semibold">Jane Smith</h3>
+                <p className="text-gray-600">Marketing Director</p>
+              </div>
+              {/* Add more team members here */}
             </div>
-            <div className="team-member">
-              <img src="/images/team-member2.jpg" alt="Team Member 2" />
-              <h3>Jane Smith</h3>
-              <p>Marketing Director</p>
-            </div>
-            {/* Add more team members here */}
-          </div>
-        </section>
+          </section>
+        </div>
       </main>
 
-      <footer>
-        <p>&copy; {new Date().getFullYear()} Tour360. All rights reserved.</p>
+      {/* Footer */}
+      <footer className="bg-gray-200 py-4">
+        <div className="container mx-auto text-center">
+          <p>&copy; {new Date().getFullYear()} Tour360. All rights reserved.</p>
+        </div>
       </footer>
-
-      <style js>{`
-        /* Container */
-        .about-container {
-          padding: 20px;
-          max-width: 800px;
-          margin: 0 auto;
-          color: #333;
-          font-family: Arial, sans-serif;
-        }
-
-        /* Header */
-        header {
-          text-align: center;
-          margin-bottom: 30px;
-        }
-
-        header h1 {
-          color: #0070f3; /* Blue color from dashboard */
-          font-size: 2rem;
-          margin-bottom: 10px;
-        }
-
-        /* Main */
-        .about-section {
-          margin-bottom: 40px;
-        }
-
-        .about-section h2 {
-          color: #0070f3; /* Blue color from dashboard */
-          font-size: 1.5rem;
-          margin-bottom: 20px;
-        }
-
-        .team-members {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 20px;
-          justify-content: center;
-        }
-
-        .team-member {
-          text-align: center;
-          background-color: #f0f0f0;
-          padding: 20px;
-          border-radius: 10px;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          width: 200px;
-        }
-
-        .team-member h3 {
-          margin-bottom: 5px;
-        }
-
-        .team-member p {
-          color: #666;
-        }
-
-        .team-member img {
-          width: 100px;
-          height: 100px;
-          border-radius: 50%;
-          margin-bottom: 10px;
-        }
-
-        footer {
-          text-align: center;
-          margin-top: 50px;
-        }
-
-        footer p {
-          color: #666;
-          font-size: 0.9rem;
-        }
-      `}</style>
     </div>
   );
 }

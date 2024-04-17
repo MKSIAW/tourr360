@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 import { useSpeechSynthesis } from 'react-speech-kit';
+import Link from 'next/link';
 
 const ReactPhotoSphereViewer = dynamic(
   () => import('react-photo-sphere-viewer').then(mod => mod.ReactPhotoSphereViewer),
@@ -13,7 +14,7 @@ const Home = () => {
   const [speechText, setSpeechText] = useState('');
 
   const handleBookNowClick = () => {
-    setSpeechText("You've clicked Book Now button. Please proceed with your booking.");
+    setSpeechText("Please proceed with your booking.");
     speak({ text: speechText });
   };
 
@@ -26,7 +27,9 @@ const Home = () => {
     <div className="App relative">
       <ReactPhotoSphereViewer src="./360 IMAGES/center.jpeg" height="100vh" width="100%" />
       <div className="absolute bottom-4 left-4 flex flex-col gap-4">
-        <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg cursor-pointer" onClick={handleBookNowClick}>Book Now</button>
+      <Link href="/booking">
+          <id className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg cursor-pointer" onClick={handleBookNowClick}>Book Now</id>
+        </Link>
         <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg cursor-pointer" onClick={handleInfoClick}>Info</button>
       </div>
     </div>
