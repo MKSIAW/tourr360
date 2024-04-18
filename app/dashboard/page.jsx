@@ -5,6 +5,9 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Header from '../components/header';
 import Footer from '../components/footer';
+import LocationFilter from '../components/locationFilter';
+import CategoryFilter from '../components/categoryFilter';
+import PriceRangeFilter from '../components/priceFilter';
 
 const Dashboard = () => {
   const [touristSites, setTouristSites] = useState([]);
@@ -36,25 +39,34 @@ const Dashboard = () => {
       </Head>
 
       <Header />
+
+      {/* Filters Section */}
+      <div className="flex bg-white p-4 space-x-4">
+        <LocationFilter />
+        <CategoryFilter />
+        <PriceRangeFilter />
+        {/* Add other filter components here */}
+      </div>
+
       {/* Main Content */}
       <main className="flex-grow p-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {touristSites.map(site => (
             <Link key={site.id} href={`/VirtualTour/${site.id}`}>
-              <id className="block border border-gray-300 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 ease-in-out">
+              <div className="block border border-gray-300 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 ease-in-out">
                 <img src={site.image} alt={site.name} className="w-full h-48 object-cover" />
                 <div className="p-4">
                   <h3 className="text-lg font-semibold mb-2">{site.name}</h3>
                   <p className="text-sm">{site.location}</p>
                 </div>
-              </id>
+              </div>
             </Link>
           ))}
         </div>
       </main>
-      <Footer/>
+
+      <Footer />
     </div>
-       
   );
 }
 
