@@ -1,8 +1,12 @@
 import { FaFacebook, FaTwitter, FaGoogle } from 'react-icons/fa';
+import Header from '../components/header';
+import Footer from '../components/footer';
 
 
 const SignUp = () => {
     return (
+      <div>
+      <Header />
       <div className="flex items-center justify-center min-h-screen bg-cover bg-center" style={{ backgroundImage: "url('/background.jpg')" }}>
         <div className="sign-up-container w-96 mx-auto p-8 bg-white shadow-lg rounded-lg">
           <h2 className="text-2xl font-semibold mb-4">Sign Up</h2>
@@ -38,6 +42,8 @@ const SignUp = () => {
             <FaGoogle className="w-8 h-8 mr-4 text-red-600 cursor-pointer hover:text-red-800" />
           </div>
         </div>
+      </div>
+      <Footer />
       </div>
     );
   };

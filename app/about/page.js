@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import Header from '../components/header';
+import Footer from '../components/footer';
 
 const About = () => {
   return (
@@ -9,13 +11,9 @@ const About = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* Header */}
-      <header className="bg-blue-500 text-white py-4">
-        <div className="container mx-auto">
-          <h1 className="text-3xl font-semibold text-center">About Us</h1>
-        </div>
-      </header>
-
+      
+      
+<Header/>
       {/* Main content */}
       <main className="flex-grow">
         <div className="container mx-auto py-8 px-4">
@@ -44,12 +42,8 @@ const About = () => {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-gray-200 py-4">
-        <div className="container mx-auto text-center">
-          <p>&copy; {new Date().getFullYear()} Tour360. All rights reserved.</p>
-        </div>
-      </footer>
+     
+      <Footer/>
     </div>
   );
 }
