@@ -14,7 +14,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white text-blue-600 p-4 flex justify-between items-center">
+    <header className="bg-white text-black-600 p-4 flex justify-between items-center sticky top-0 z-50">
       <div className="flex items-center space-x-2">
         <Link href="/dashboard">
           <id className="text-2xl font-semibold">Tour360</id>
@@ -23,45 +23,14 @@ const Header = () => {
       </div>
 
       <div className="flex items-center space-x-4">
-        <input type="text" placeholder="Search..." className="p-2 rounded-full bg-blue-600 text-white border-none focus:outline-none" /> 
-        
-        <div className="relative">
-          <button className="text-blue-600 hover:underline" onClick={toggleReview}>
-            Review
-          </button>
-          {isReviewOpen && (
-            <div className="absolute top-full right-0 bg-white shadow-lg rounded-md mt-2 w-48">
-              <ul className="py-2">
-                <li>
-                  <Link href="/write-review" passHref>
-                    <id className="block px-4 py-2 hover:bg-blue-100" onClick={closeReview}>
-                      Write a Review
-                    </id>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/view-reviews" passHref>
-                    <id className="block px-4 py-2 hover:bg-blue-100" onClick={closeReview}>
-                      View Reviews
-                    </id>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          )}
-        </div>
+        <Link href="#" className="hover:bg-grey hover:text-black py-2 px-4 rounded-full">Discover</Link>
+        <Link href="#" className="hover:bg-grey hover:text-black py-2 px-4 rounded-full">Trips</Link>
+        <Link href="#" className="hover:bg-grey hover:text-black py-2 px-4 rounded-full">Review</Link>
+        <Link href="#" className="hover:bg-grey hover:text-black py-2 px-4 rounded-full">More</Link>
+      </div>
 
-        <Link href="/signin" passHref>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-full">
-            Sign In
-          </button>
-        </Link>
-
-        <div className="flex items-center space-x-2">
-          <Link href="/settings" className="text-blue-600">Settings</Link>
-          <Link href="/cart" className="text-blue-600">Cart</Link>
-          <Link href="/profile" className="text-blue-600">Profile</Link>
-        </div>
+      <div className="flex items-center space-x-4">
+        <button className="bg-black text-white py-2 px-4 rounded-full">Sign In</button>
       </div>
     </header>
   );

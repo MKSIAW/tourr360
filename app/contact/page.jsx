@@ -12,6 +12,7 @@ export default function Page() {
     const formData = {
       name: e.currentTarget.name.value,
       email: e.currentTarget.email.value,
+      subject: e.currentTarget.subject.value,
       message: e.currentTarget.message.value
     };
 
@@ -21,7 +22,8 @@ export default function Page() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Basic ' + btoa('username:password') // Replace username and password with your credentials
+          
+          
         },
         body: JSON.stringify(formData)
       });
@@ -61,6 +63,12 @@ export default function Page() {
             <div className="flex items-center border border-gray-300 rounded-md px-3 py-2">
               <FiMail className="text-gray-500 mr-2" />
               <input type="text" name="email" id="email" placeholder="Your Email" className="w-full outline-none focus:outline-none" />
+            </div>
+          </div>
+          <div className="mb-4">
+            <div className="flex items-center border border-gray-300 rounded-md px-3 py-2">
+              <FiMail className="text-gray-500 mr-2" />
+              <input type="text" name="subject" id="subject" placeholder="Your Subject" className="w-full outline-none focus:outline-none" />
             </div>
           </div>
           <div className="mb-4">

@@ -25,7 +25,7 @@ const Home = () => {
 
   return (
     <div className="App relative">
-      <ReactPhotoSphereViewer src="./360 IMAGES/center.jpeg" height="100vh" width="100%" />
+      <ReactPhotoSphereViewer src="./360/reception.jpg" height="100vh" width="100%" />
       <div className="absolute bottom-4 left-4 flex flex-col gap-4">
       <Link href="/booking">
           <id className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg cursor-pointer" onClick={handleBookNowClick}>Book Now</id>

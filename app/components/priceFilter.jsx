@@ -8,11 +8,11 @@ const PriceRangeFilter = () => {
   // List of price range options
   const priceRanges = [
     'Any',
-    'Less than $50',
-    '$50 - $100',
-    '$100 - $200',
-    '$200 - $500',
-    'More than $500'
+    'Less than GHS 50',
+    'GHS 50 - GHS 100',
+    'GHS 100 - GHS 200',
+    'GHS 200 - GHS 500',
+    'More than GHS 500'
   ];
 
   // Function to toggle dropdown visibility
