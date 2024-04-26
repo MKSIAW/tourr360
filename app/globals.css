@@ -2,3 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+/* globals.css */
+
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+ 
+  
+  code, pre {
+    font-family: Courier, monospace, Arial, sans-serif;
+  }
+  
+  .text-2xl {
+    font-size: 2rem; /* Adjust font size here */
+  }
+  
+  .text-4xl {
+    font-size: 3rem; /* Adjust font size here */
+  }
+  
+  .text-lg {
+    font-size: 1.25rem; /* Adjust font size here */
+  }
+  

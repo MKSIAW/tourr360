@@ -19,7 +19,7 @@ const Header = () => {
         <Link href="/dashboard">
           <id className="text-2xl font-semibold">Tour360</id>
         </Link>
-        <img src="/images/dobiison-virtual-tour-logo.webp" alt="Profile Icon" className="h-12 w-12 rounded-full" />
+        <img src="/images/owl.jpg" alt="Profile Icon" className="h-12 w-12 rounded-full" />
       </div>
 
       <div className="flex items-center space-x-4">
@@ -30,7 +30,9 @@ const Header = () => {
       </div>
 
       <div className="flex items-center space-x-4">
-        <button className="bg-black text-white py-2 px-4 rounded-full">Sign In</button>
+        <a href="/signin">
+        <button className="bg-black text-white py-2 px-4 rounded-full cursor-pointer">Sign In</button>
+        </a>
       </div>
     </header>
   );
