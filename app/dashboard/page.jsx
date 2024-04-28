@@ -49,11 +49,11 @@ const Dashboard = () => {
       </div>
 
       {/* Main Content */}
-      <main className="flex-grow p-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <main className="flex-grow p-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {touristSites.map(site => (
             <Link key={site.id} href={`/VirtualTour/${site.id}`}>
-              <div className="block border border-gray-300 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 ease-in-out">
+              <div className=" rounded-lg overflow-hidden hover:shadow-lg transition duration-300 ease-in-out">
                 <img src={site.image} alt={site.name} className="w-full h-48 object-cover" />
                 <div className="p-4">
                   <h3 className="text-lg font-semibold mb-2">{site.name}</h3>

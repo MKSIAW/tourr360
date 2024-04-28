@@ -63,6 +63,7 @@ const Welcome = ({ user }) => {
     <FiSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" /> 
   </div>
 </div>
+
 <div className="placeholder-container text-center mt-20">
   <div className="placeholder bg-gray-0 p-4 w-250 mx-40 relative rounded-xl">
     <img src="/images/choice.avif" alt="Hotels" className="w-full rounded-lg mb-4" />
