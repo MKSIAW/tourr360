@@ -99,7 +99,7 @@ const Welcome = ({ user }) => {
   <div className="placeholder bg-gray-0 p-4 w-250 mx-40 relative rounded-xl">
     <img src="/images/choice.avif" alt="Hotels" className="w-full rounded-lg mb-4" />
     <div className="absolute bottom-10 left-10 w-full text-left">
-      <h2 className="text-3xl font-bold text-white font-arial mb-1">World's Best Hotels for 2024</h2>
+      <h2 className="text-3xl font-bold text-white font-arial mb-1">Ghana's Best Hotels for 2024</h2>
       <p className="text-1xl text-white font-arial mb-4">See our Tourist Choice Awards Best of the Best Winners</p>
       <Link href="/hotels"> 
                 <id className="bg-white hover:bg-gray-100 text-black font-bold py-2 px-4 rounded-3xl font-arial text-xl">
@@ -116,7 +116,7 @@ const Welcome = ({ user }) => {
   <p className="text-lg mb-8">Book these experiences for a close-up look at Accra</p>
   <div className="flex gap-8">
 
-    {/* Placeholder 1 */}
+   
     <div className="block transition duration-300 ease-in-out">
       <div className="placeholder bg-gray-0 p-2 rounded-lg ">
         <img src="/images/elmina.jpg" alt="Placeholder 1" className="w-72 h-72 rounded-lg mb-4" />
@@ -126,7 +126,7 @@ const Welcome = ({ user }) => {
       </div>
     </div>
 
-    {/* Placeholder 2 */}
+   
     <div className="block transition duration-300 ease-in-out">
       <div className="placeholder bg-gray-0 p-2 rounded-lg ">
         <img src="/images/polo.jpg" alt="Placeholder 2" className="w-72 h-72 rounded-lg mb-4" />
@@ -136,7 +136,7 @@ const Welcome = ({ user }) => {
       </div>
     </div>
 
-    {/* Placeholder 3 */}
+
     <div className="block transition duration-300 ease-in-out">
       <div className="placeholder bg-gray-0 p-2 rounded-lg ">
         <img src="/images/safari.avif" alt="Placeholder 3" className="w-72 h-72 rounded-lg mb-4" />
@@ -146,7 +146,7 @@ const Welcome = ({ user }) => {
       </div>
     </div>
 
-    {/* Placeholder 4 */}
+
     <div className="block transition duration-300 ease-in-out">
       <div className="placeholder bg-gray-0 p-2 rounded-lg ">
         <img src="/images/slave.jpg" alt="Placeholder 4" className="w-72 h-72 rounded-lg mb-4" />
@@ -159,28 +159,27 @@ const Welcome = ({ user }) => {
 </div>
 
 <div className="text-center mt-20">
-  <div className="max-w-4xl mx-auto border rounded-lg overflow-hidden">
-    <div className="flex items-center p-8 bg-beige">
-      {/* Image */}
-      <img src="/images/plan.jpg" alt="Placeholder 5" className="w-48 h-36 rounded-lg mr-8" />
-
-      {/* Text */}
+  <div className="max-w-6xl mx-auto border rounded-lg overflow-hidden">
+    <div className="flex items-center p-6 bg-gray-100">
+    
+      <img src="/images/plan.jpg" alt="Placeholder 5" className="w-60 h-40 rounded-lg mr-8" />
       <div>
         <h2 className="text-3xl font-bold mb-4 font-arial">Keep on Planning</h2>
         <p className="text-lg mb-4 font-arial">What to do, where to eat & more trip inspo</p>
       </div>
 
-      {/* Button */}
       <div className="flex-grow"></div>
+      <Link href="/articles">
       <button className="bg-beige text-black font-bold py-3 px-6 rounded-md shadow-md">
         See More
       </button>
+      </Link>
     </div>
   </div>
 </div>
         </main>
       </div>
-      <Footer />
+      <Footer/>
     </div>
   );
 }
