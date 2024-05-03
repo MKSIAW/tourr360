@@ -95,17 +95,17 @@ const Welcome = ({ user }) => {
             </div>
           </div>
 
-<div className="placeholder-container text-center mt-20">
-  <div className="placeholder bg-gray-0 p-4 w-250 mx-40 relative rounded-xl">
+          <div className="placeholder-container text-center mt-20">
+  <div className="placeholder bg-gray-0 p-4 w-350 mx-auto relative rounded-xl">
     <img src="/images/choice.avif" alt="Hotels" className="w-full rounded-lg mb-4" />
     <div className="absolute bottom-10 left-10 w-full text-left">
       <h2 className="text-3xl font-bold text-white font-arial mb-1">Ghana's Best Hotels for 2024</h2>
       <p className="text-1xl text-white font-arial mb-4">See our Tourist Choice Awards Best of the Best Winners</p>
-      <Link href="/hotels"> 
-                <id className="bg-white hover:bg-gray-100 text-black font-bold py-2 px-4 rounded-3xl font-arial text-xl">
-                  Explore the List
-                </id>
-              </Link>
+      <Link href="/hotels">
+        <id className="bg-white hover:bg-gray-100 text-black font-bold py-2 px-4 rounded-3xl font-arial text-xl">
+          Explore the List
+        </id>
+      </Link>
     </div>
   </div>
 </div>
