@@ -5,15 +5,37 @@ import Header from './components/header';
 import Footer from './components/footer';
 import { FiSearch, FiHome, FiCoffee, FiList } from 'react-icons/fi';
 import { FaAirbnb } from 'react-icons/fa';
+import Link from 'next/link';
 
 const Welcome = ({ user }) => {
 
-  const [searchText, setSearchText] = useState("Search for places to go, things to do, hotels...");
+  const [searchQuery, setSearchQuery] = useState("Search for places to go, things to do, hotels...");
   const [whereToText, setWhereToText] = useState("Where to?");
+  const [inputValue, setInputValue] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
 
   const handleLinkClick = (text, placeholder) => {
     setWhereToText(text);
-    setSearchText(placeholder);
+    setSearchQuery(placeholder);
+  };
+
+  const data = [
+    { name: "Elmina Castle", rating: 4.5 },
+    { name: "Polo Beach House", rating: 4.2 },
+    { name: "Safari Valley", rating: 4.7 },
+    { name: "Slave Market", rating: 4.9 },
+  ];
+  
+
+  const handleSearch = () => {
+    const filteredData = data.filter((item) => {
+      return item.name.toLowerCase().includes(inputValue.toLowerCase());
+    });
+    setSearchResults(filteredData);
+  };
+
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value.trim());
   };
 
 
@@ -42,7 +64,7 @@ const Welcome = ({ user }) => {
                 Hotels
               </div>
          
-  <div className="text-2xl hover:text-black-500 hover:underline transition duration-300 ease-in-out flex items-center" onClick={() => handleLinkClick("Find places to eat", "Restaurants")}>
+  <div className="text-2xl hover:text-black-500 hover:underline transition duration-300 ease-in-out flex items-center" onClick={() => handleLinkClick("Find places to eat", "Restaurant")}>
                 
     <FiCoffee className="h-6 w-6 mr-2" />
     Restaurants
@@ -60,14 +82,16 @@ const Welcome = ({ user }) => {
             <div className="relative">
               <input
                 type="search"
-                placeholder={searchText}
+                placeholder={searchQuery}
+                value={inputValue}
+                onChange={handleInputChange}
                 className="py-5 px-10 text-lg text-gray-800 rounded-full shadow-md focus:outline-none"
                 style={{ width: "800px" }} 
               />
-              <button className="absolute right-0 top-0 mt-3 mr-3 py-3 px-6 bg-gradient-to-r from-green-400 to-green-600 text-white font-bold rounded-full shadow-md">
+              <button className="absolute right-0 top-0 mt-3 mr-3 py-3 px-6 bg-gradient-to-r from-green-400 to-green-600 text-white font-bold rounded-full shadow-md" onClick={handleSearch}>
                 Search
               </button>
-              <FiSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" /> 
+              <FiSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"  /> 
             </div>
           </div>
 
@@ -77,9 +101,11 @@ const Welcome = ({ user }) => {
     <div className="absolute bottom-10 left-10 w-full text-left">
       <h2 className="text-3xl font-bold text-white font-arial mb-1">World's Best Hotels for 2024</h2>
       <p className="text-1xl text-white font-arial mb-4">See our Tourist Choice Awards Best of the Best Winners</p>
-      <button className="bg-white hover:bg-gray-100 text-black font-bold py-2 px-4 rounded-3xl font-arial text-xl">
-        Explore the List
-      </button>
+      <Link href="/hotels"> 
+                <id className="bg-white hover:bg-gray-100 text-black font-bold py-2 px-4 rounded-3xl font-arial text-xl">
+                  Explore the List
+                </id>
+              </Link>
     </div>
   </div>
 </div>
