@@ -23,7 +23,7 @@ const Header = () => {
       </div>
 
       <div className="flex items-center space-x-4">
-        <Link href="/dashboard" className="hover:bg-grey hover:text-black py-2 px-4 rounded-full">Discover</Link>
+        <Link href="/dashboard" className="hover:bg-grey hover:text-black py-2 px-4 rounded-full">Virtual Tour</Link>
         <Link href="#" className="hover:bg-grey hover:text-black py-2 px-4 rounded-full">Trips</Link>
         <Link href="/write-review" className="hover:bg-grey hover:text-black py-2 px-4 rounded-full">Review</Link>
         <Link href="#" className="hover:bg-grey hover:text-black py-2 px-4 rounded-full">More</Link>

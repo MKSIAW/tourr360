@@ -3,30 +3,35 @@
 import Header from '../components/header';
 import Footer from '../components/footer';
 import React from 'react';
+import { FiSearch } from 'react-icons/fi';
 
 const ReviewPage = () => {
   return (
     <div>
       <Header />
-      <main className="container mx-auto py-8">
-      <div className="flex items-center p-6 bg-gray-100">
+      <main className="container mx-auto py-10 ">
+      <div className="flex items-center p-6 bg-gray-100 ">
   <div className="text-center mb-12">
     <h1 className="text-3xl font-bold text-gray-900 mb-4">Write a Review, Make Someone's Trip</h1>
-    <p className="text-lg text-gray-700">Stories like yours are what helps travelers have better trips. Share your experience and help out a fellow traveler!</p>
+    <p className="text-lg text-gray-700 mb-10 "> Stories like yours are what helps travelers have better trips. Share your experience and help out a fellow traveler!</p>
+   
     {/* Search bar */}
-    <div className="flex justify-center items-center mt-8">
-      <input
-        type="text"
-        placeholder="What would you like to review?"
-        className="border border-gray-400 px-4 py-2 rounded-l-md w-96 focus:outline-none"
-      />
-      <button className="bg-blue-500 text-white px-4 py-2 rounded-r-md">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a4 4 0 11-8 0 4 4 0 018 0z" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 21v-2m0 0V9m0 12H7a2 2 0 01-2-2V5a2 2 0 012-2h10a2 2 0 012 2v14a2 2 0 01-2 2z" />
-        </svg>
-      </button>
-    </div>
+    <div className="search-bar flex justify-center w-full">
+            <div className="relative">
+              <input
+                type="search"
+                placeholder="What would you like to review?"
+              
+                className="py-5 px-10 text-lg text-gray-800 rounded-full shadow-md focus:outline-none"
+                style={{ width: "800px" }} 
+              />
+              <button className="absolute right-0 top-0 mt-3 mr-3 py-3 px-6 bg-gradient-to-r from-green-400 to-green-600 text-white font-bold rounded-full shadow-md" >
+                search
+              </button>
+              <FiSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"  /> 
+            </div>
+          </div>
+
   </div>
 </div>
 
