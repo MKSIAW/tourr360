@@ -119,7 +119,9 @@ const Welcome = ({ user }) => {
    
     <div className="block transition duration-300 ease-in-out">
       <div className="placeholder bg-gray-0 p-2 rounded-lg ">
+        <Link href="/beaches">
         <img src="/images/elmina.jpg" alt="Placeholder 1" className="w-72 h-72 rounded-lg mb-4" />
+        </Link>
         <h3 className="text-xl font-semibold mb-2">Elmina Castle</h3>
         <p className="text-gray-700 mb-2">Rating: 4.5</p>
         <p className="text-gray-700">Price Range: GHS 50 - 100</p>
@@ -129,7 +131,9 @@ const Welcome = ({ user }) => {
    
     <div className="block transition duration-300 ease-in-out">
       <div className="placeholder bg-gray-0 p-2 rounded-lg ">
+        <Link href="/beaches">
         <img src="/images/polo.jpg" alt="Placeholder 2" className="w-72 h-72 rounded-lg mb-4" />
+        </Link>
         <h3 className="text-xl font-semibold mb-2">Polo Beach House</h3>
         <p className="text-gray-700 mb-2">Rating: 4.2</p>
         <p className="text-gray-700">Price Range: GHS 30 - 80</p>
@@ -139,7 +143,9 @@ const Welcome = ({ user }) => {
 
     <div className="block transition duration-300 ease-in-out">
       <div className="placeholder bg-gray-0 p-2 rounded-lg ">
+        <Link href="beaches">
         <img src="/images/safari.avif" alt="Placeholder 3" className="w-72 h-72 rounded-lg mb-4" />
+        </Link>
         <h3 className="text-xl font-semibold mb-2">Safari Valley</h3>
         <p className="text-gray-700 mb-2">Rating: 4.7</p>
         <p className="text-gray-700">Price Range: GHS 100 - 300</p>
@@ -149,7 +155,9 @@ const Welcome = ({ user }) => {
 
     <div className="block transition duration-300 ease-in-out">
       <div className="placeholder bg-gray-0 p-2 rounded-lg ">
+        <Link href="/beaches">
         <img src="/images/slave.jpg" alt="Placeholder 4" className="w-72 h-72 rounded-lg mb-4" />
+        </Link>
         <h3 className="text-xl font-semibold mb-2">Slave Market</h3>
         <p className="text-gray-700 mb-2">Rating: 4.9</p>
         <p className="text-gray-700">Price Range: GHS 80 - 200</p>
