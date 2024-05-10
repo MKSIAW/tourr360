@@ -8,6 +8,8 @@ import Footer from '../components/footer';
 import LocationFilter from '../components/locationFilter';
 import CategoryFilter from '../components/categoryFilter';
 import PriceRangeFilter from '../components/priceFilter';
+//import Home from '../VirtualTour/page';
+
 
 const Dashboard = () => {
   const [touristSites, setTouristSites] = useState([]);
@@ -15,7 +17,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchTouristSites = async () => {
       try {
-        const response = await axios.get('http://localhost/wordpress/wp-json/wp/v2/tour-site?acf_format=standard&_fields=id,title,acf');
+        const response = await axios.get('http://localhost/wordpress/wp-json/wp/v2/tour-site?acf_format=standard&_fields=id,title,acf&per_page=20');
         setTouristSites(response.data.map(site => ({
           id: site.id,
           name: site.title.rendered,
@@ -66,8 +68,11 @@ const Dashboard = () => {
       </main>
 
       <Footer />
+      
+
     </div>
   );
 }
 
 export default Dashboard;
+

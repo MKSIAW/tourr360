@@ -1,11 +1,12 @@
 'use client'
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 import { useSpeechSynthesis } from 'react-speech-kit';
 import { FaBook, FaImage, FaPlay, FaPause, FaMapMarker, FaStar, FaMoneyBill, FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { MarkersPlugin } from '@photo-sphere-viewer/markers-plugin';
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+import Link from 'next/link';
 
 const ReactPhotoSphereViewer = dynamic(
   () => import('react-photo-sphere-viewer').then(mod => mod.ReactPhotoSphereViewer),
@@ -14,19 +15,18 @@ const ReactPhotoSphereViewer = dynamic(
 
 const Home = () => {
   const { speak, speaking, cancel } = useSpeechSynthesis();
-  const [speechText, setSpeechText] = useState('');
   const [currentImage, setCurrentImage] = useState('./360/reception.jpg');
-  const [showImages, setShowImages] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(true);
-  const [modalOpen, setModalOpen] = useState(false);
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [lightboxIndex, setLightboxIndex] = useState(0);
+  
   const [placeImages, setPlaceImages] = useState([
     './images/kwame.jpg',
     './images/kwame2.jpg',
     './images/kwame3.jpg',
+    './images/kwame4.jpg',
+    './images/kwame5.jpg',
+    './images/kwame6.jpg',
+    './images/kwame7.jpg',
+    './images/kwame8.jpg',
   ]);
-
   const [markers, setMarkers] = useState([
     {
       id: 'new-marker',
@@ -38,29 +38,23 @@ const Home = () => {
       onClick: () => handleMarkerClick('new-marker', './360/another-image.jpg', 'Another image speech'), // Example onClick event for marker
     },
   ]);
-
-  useEffect(() => {
-    // Initial speech on component mount
-    setSpeechText("The Kwame Nkrumah Memorial Park is located in downtown Accra, the capital of Ghana. It is dedicated to the prominent Ghanaian leader Osagyefo Dr. Kwame Nkrumah. The memorial complex was dedicated in 1992, and is situated on the site of the former British colonial polo grounds, where the independence of Ghana was declared, in Accra. The KNMP's mausoleum, designed by Don Arthur, houses the bodies of Dr. Kwame Nkrumah and his wife Fathia Nkrumah. The building is meant to represent an upside-down sword, which in Akan culture is a symbol of peace. The mausoleum is clad from top to bottom with Italian marble, with a black star at its apex to symbolize unity. The mausoleum is clad from top to bottom with Italian marble, with a black star at its apex to symbolize unity.");
-    speak({ text: speechText });
-    return () => {
-      // Clean up on component unmount
-      cancel();
-    };
-  }, []);
+  const [speechText, setSpeechText] = useState(
+    "The Kwame Nkrumah Memorial Park is located in downtown Accra, the capital of Ghana. It is dedicated to the prominent Ghanaian leader Osagyefo Dr. Kwame Nkrumah. The memorial complex was dedicated in 1992, and is situated on the site of the former British colonial polo grounds, where the independence of Ghana was declared, in Accra. The KNMP's mausoleum, designed by Don Arthur, houses the bodies of Dr. Kwame Nkrumah and his wife Fathia Nkrumah. The building is meant to represent an upside-down sword, which in Akan culture is a symbol of peace. The mausoleum is clad from top to bottom with Italian marble, with a black star at its apex to symbolize unity. The mausoleum is clad from top to bottom with Italian marble, with a black star at its apex to symbolize unity."
+  );
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
 
   const handleMarkerClick = (markerId, imageSrc, speech) => {
-    // Change image and speak new speech text
     setCurrentImage(imageSrc);
     setSpeechText(speech);
     speak({ text: speech });
-    // Stop autorotation when a marker is clicked
     setIsPlaying(false);
   };
 
   const handlePlayPause = () => {
     setIsPlaying(prevState => !prevState);
-    // Toggle speech synthesis based on play/pause state
     if (!speaking && !isPlaying) {
       speak({ text: speechText });
     } else if (speaking && isPlaying) {
@@ -70,7 +64,7 @@ const Home = () => {
 
   const handlePause = () => {
     setIsPlaying(false);
-    cancel(); // Pause speech
+    cancel();
   };
 
   const toggleModal = () => {
@@ -110,7 +104,6 @@ const Home = () => {
         autorotate={true}
         autorotateDelay={1000}
       />
-      {/* Buttons and icons section */}
       <div className="absolute bottom-10 left-4 flex gap-4">
         <button className="focus:outline-none" onClick={toggleModal}>
           <FaBook className="text-white cursor-pointer" size={32} />
@@ -124,7 +117,8 @@ const Home = () => {
           <FaPlay className="text-white cursor-pointer" size={32} onClick={handlePlayPause} />
         )}
       </div>
-      {/* Lightbox for images */}
+
+
       {lightboxOpen && (
         <div className="modal fixed top-0 left-0 w-full h-full flex items-end justify-center bg-black bg-opacity-50">
           <div className="modal-content p-4 rounded-t-lg">
@@ -145,7 +139,8 @@ const Home = () => {
           </div>
         </div>
       )}
-      {/* Modal for booking */}
+
+
       {modalOpen && (
         <div className="modal fixed top-0 left-0 w-full h-full flex items-end justify-center bg-black bg-opacity-50">
           <div className="modal-content bg-white p-4 rounded-t-lg shadow-lg">
@@ -167,10 +162,10 @@ const Home = () => {
               <FaMoneyBill className="text-green-500 mr-2" />
               <span>GHS 250</span>
             </div>
-            <Link href="/booking">
-              <button className="bg-blue-500 text-white px-4 py-2 rounded-md mt-4">
-                Book Now
-              </button>
+            <Link href={'/booking'}>
+            <button className="bg-blue-500 text-white px-4 py-2 rounded-md mt-4" onClick={toggleModal}>
+              Book Now
+            </button>
             </Link>
           </div>
         </div>
