@@ -2,6 +2,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import Link from 'next/link';
 
+
 const ExplorePage = () => {
   return (
     <div>
@@ -18,18 +19,18 @@ const ExplorePage = () => {
           <div className="container mx-auto flex flex-col sm:flex-row items-center">
             
             <div className="w-full sm:w-2/3 mb-4 sm:mb-0">
-              <Link href="/food-and-drink">
+              <Link href="/foodanddrink">
               <img src="/images/food.jpg" alt="Food Placeholder 1" className="w-full h-[40rem] rounded-lg mb-0" />
               </Link>
             </div>
             <div className="w-full sm:w-1/3 flex flex-col justify-between sm:ml-4">
               <div className="w-full mb-4">
-              <Link href="/food-and-drink">
+              <Link href="/foodanddrink">
                 <img src="/images/drink.avif" alt="Food Placeholder 2" className="w-full rounded-lg mb-4" />
                 </Link>
               </div>
               <div className="w-full">
-              <Link href="/food-and-drink">
+              <Link href="/foodanddrink">
                 <img src="/images/restaurant.webp" alt="Food Placeholder 3" className="w-full rounded-lg" />
                 </Link>
               </div>

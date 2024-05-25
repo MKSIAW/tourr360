@@ -54,7 +54,7 @@ const Dashboard = () => {
       <main className="flex-grow p-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {touristSites.map(site => (
-            <Link key={site.id} href={`/VirtualTour/${site.id}`}>
+            <Link key={site.id} href={`/VirtualTour/`}>
               <div className=" rounded-lg overflow-hidden hover:shadow-lg transition duration-300 ease-in-out">
                 <img src={site.image} alt={site.name} className="w-full h-48 object-cover" />
                 <div className="p-4">
