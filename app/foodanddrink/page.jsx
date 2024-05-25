@@ -2,106 +2,84 @@ import Link from 'next/link';
 import Header from '../components/header';
 import Footer from '../components/footer';
 
-const ArticlePage = () => {
+const FoodAndDrinksPage = () => {
   return (
     <>
     <Header/>
     <div className="max-w-4xl mx-auto px-4 py-8">
       <header className="text-center mb-8">
-        <h1 className="text-3xl font-bold">3 Best Areas to Stay in Kauai</h1>
-        <p className="text-gray-600">By Charlene Fang • May 23, 2024 • 7 minutes read</p>
+        <h1 className="text-3xl font-bold mb-4">Top 3 Restaurants in Accra</h1>
+        <p className="text-gray-600">By Foodie Explorer • May 23, 2024 • 7 minutes read</p>
       </header>
       <section className="mb-8">
-        <img src="/images/kauai-coastline.jpg" alt="Aerial view of Kauai island coastline and mountains" className="w-full mb-4" />
+      <img
+  src="/images/food.jpg" alt="Aerial view of Kauai island coastline and mountains"className="max-w-screen-1xl mx-auto mb-4"
+/>
+
         <p className="text-lg leading-relaxed">
-          When I was growing up, Kauai—the Garden Island—was where my family would head when Oahu felt too busy. It hasn’t changed much. 
-          The most pristine of all the Hawaiian islands, it is also the oldest. The island’s landscape—often a backdrop for major films like 
-          Jurassic Park and Pirates of the Caribbean—is mesmerizing. Think: deep verdant valleys, towering sea cliffs, neon rainforests, 
-          and white-sand beaches.
+        Accra, the vibrant capital city of Ghana, is known for its diverse culinary scene. From traditional Ghanaian cuisine
+            to international flavors, Accra has something for everyone. Here are some of the newest restaurants that have been
+            making waves in the city.
         </p>
       </section>
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">For beaches, sun-soaked luxury, and convenience: Poipu</h2>
-        <img src="/images/poipu-resort.jpg" alt="Aerial view of oceanfront resort with pools and lush grounds" className="w-full mb-4" />
+        <h2 className="text-2xl font-bold mb-4">1. Ernesto's Country Club Restaurant</h2>
+        <img src="/images/ernesto.jpg" alt="Aerial view of oceanfront resort with pools and lush grounds" className="w-full mb-4" />
         <p className="text-lg leading-relaxed">
-          Kauai’s lush landscape means it’s no stranger to rainfall. Poipu on the sunny south shore is known for its reliable weather—so I like 
-          to stay here even though it can get busy. It’s also conveniently located for easy travel to other parts of the island.
-        </p>
-        <h3 className="text-xl font-bold mb-2">Where to stay</h3>
-        <p className="text-lg leading-relaxed">
-          Couples on their honeymoon love the intimate and serene Koa Kea Hotel & Resort. With pretty coral-themed ocean-facing view rooms, 
-          I like the resort’s adult vibes (no waterslides in sight). Plus, it’s walking distance to Kiahuna Beach and Poipu Beach. 
-        </p>
-        <p className="text-lg leading-relaxed">
-          For a family-friendly option, the expansive Grand Hyatt Kauai Resort and Spa has an overwhelming amount of amenities including 
-          10 restaurants, three pools, a salt-water lagoon, a massive spa, and a kid’s club—so be warned that you might not leave the resort.
-        </p>
+        Ernesto's country club restaurant offers High-end Italian, Mediterranean and Afro-Fusion Experience creating a unique dining experience. Nestled beside the Trasacco Valley Phase 2 Entrance on Luciana Blvd in Accra, Ghana, is the vibrant and lively Country Club. This trendy restaurant is a popular destination for locals and visitors alike, offering a modern and fun dining experience.</p>
+
+        <p className="text-lg leading-relaxed"> As you step inside the Country Club, you’ll be greeted by a warm and inviting atmosphere. The interior is sleek and stylish, with contemporary furnishings and a vibrant color scheme that adds a touch of energy to the space.</p>
+        
+        
       </section>
       <section className="mb-8">
-        <h3 className="text-xl font-bold mb-2">Travelers say</h3>
-        <blockquote className="italic text-gray-600 border-l-4 border-gray-400 pl-4 mb-4">
-          “This was our 13th stay at the GHK. Always a wonderful check-in experience from the lei greeting pleasant front desk staff and impressive lobby. Our room was spacious and clean with some new furniture and a new carpet. The pool area is spectacular. You can hike a very scenic hike along the coast right from Shipwreck beach and see tons of turtles in the ocean.”—@turtlegirl
-        </blockquote>
-        <h3 className="text-xl font-bold mb-2">Where to eat</h3>
-        <p className="text-lg leading-relaxed">
-          Even if you’re not staying at Koa Kea, book a meal at the superb Red Salt, where chef Noelani Planas, a Kauai native, whips up one-of-a-kind dishes 
-          like lemon pineapple souffle pancakes. Every week, Planas hosts a five-course wine-pairing Pa’Ina Dinner with dishes like blue crab-crusted monchong (a local fish).
-        </p>
-        <p className="text-lg leading-relaxed">
-          For a more casual (but very Hawaiian) spot, there’s the beachside Puka Dog, where there's always a line—for good reason. I love the array of Hawaiian fruit 
-          relish (coconut, banana, starfruit), and even if you think passionfruit has no place next to Polish sausage, you’ll change your mind after trying this combo.
-        </p>
-      </section>
-      <section className="mb-8">
-        <h3 className="text-xl font-bold mb-2">What to do</h3>
-        <img src="/images/poipu-beach.jpg" alt="Poipu Beach" className="w-full mb-4" />
-        <p className="text-lg leading-relaxed">
-          Poipu is all about starting and ending your day at the beach. Plan different activities at each local spot—snorkeling at Poipu Beach, spotting Hawaiian 
-          monk seals at Kiahuna Beach, relaxing in the shallow waters of Baby Beach, and boogie boarding at Brennecke’s Beach.
-        </p>
-        <p className="text-lg leading-relaxed">
-          For golfers, teeing off at Poipu Bay Golf Course is a treat. You'll want to play the whole 18 holes of this PGA course if only for the ocean views from 
-          holes 15 and 16.
-        </p>
-        <p className="text-lg leading-relaxed">
-          For a different kind of sunset activity, explore the Allerton Garden, which might look familiar: It was a major filming location in Jurassic Park. Be sure to 
-          sign up for a botanical tour followed by an oceanfront lanai dinner.
-        </p>
-      </section>
-      <footer className="text-center mt-8">
-        <p className="text-xl font-bold mb-4">Related Stories</p>
-        <ul>
-          <li>
-            <Link href="/5-perfect-days-in-kauai">
-              <id className="text-blue-600">5 Perfect Days in Kauai</id>
-            </Link>
-          </li>
-          <li>
-            <Link href="/weekend-in-maui">
-              <id className="text-blue-600">Weekend in Maui: Beaches, Brews, and Fresh Seafood</id>
-            </Link>
-          </li>
-          <li>
-            <Link href="/5-perfect-days-in-honolulu">
-              <id className="text-blue-600">5 Perfect Days in Honolulu</id>
-            </Link>
-          </li>
-          <li>
-            <Link href="/first-timers-guide-big-island">
-              <id className="text-blue-600">A First-Timer's Guide to the Island of Hawaii</id>
-            </Link>
-          </li>
-          <li>
-            <Link href="/honolulu-hotels-guide">
-              <id className="text-blue-600">Our Go-to Guide to Honolulu Hotels</id>
-            </Link>
-          </li>
-        </ul>
-        </footer>
-</div>
-<Footer />
-</>
-);
+          <h2 className="text-2xl font-bold mb-4">2. Santoku</h2>
+          <img src="/images/santoku.jpg" alt="santoku" className="w-full mb-4" />
+          <p className="text-lg leading-relaxed">
+          Santoku brings a touch of Tokyo to Accra, with its elegant restaurant, bar and terrace. There's a luxe feel to the space: minimalist interiors with polished concrete floors and brass lighting in the restaurant, while out on the terrace it's all linen upholstery and lush green foliage. When it comes to food, you can pick from staples like sushi, sashimi and gyoza, or go all-out with a tasting menu. There are impressive champagne and Japanese whisky lists, alongside a choice of creative cocktails, such as the award-winning Wasabiato, which blends wasabi, yuzu and cognac, and the Tokyo Night, which mixes vodka, lemon, kaffir lime syrup, apple, lemongrass, chilli, shiso and ginger ale.
+          </p>
+          
+        </section>
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold mb-4">3. Poloclub Restaurant & Lounge</h2>
+          <img src="/images/poloclub.jpg" alt="The Green Leaf Cafe" className="w-full mb-4" />
+          <p className="text-lg leading-relaxed">
+          The menu at PoloClub features a blend of international cuisines, with a focus on fine dining and exquisite
+            cocktails. Whether you're looking to enjoy a romantic dinner, host a business meeting, or unwind with friends
+            over drinks, PoloClub Restaurant and Lounge is the perfect destination.
+          </p>
+         
+        </section>
+        <footer className="text-center mt-8">
+  <p className="text-xl font-bold mb-4">Related Stories</p>
+  <div className="flex justify-center space-x-4">
+    <div className="placeholder bg-gray-0 p-2 rounded-lg">
+      <Link href="/best-coffee-shops-in-accra">
+        <img src="/images/coffee.avif" alt="Coffee Shop Placeholder" className="w-72 h-72 rounded-lg mb-4" />
+      </Link>
+      <span>Best Coffee Shops in Accra</span>
+    </div>
+    <div className="placeholder bg-gray-0 p-2 rounded-lg">
+      <Link href="/must-try-street-food-in-ghana">
+        <img src="/images/egg.webp" alt="Street Food Placeholder" className="w-72 h-72 rounded-lg mb-4" />
+      </Link>
+      <span>Must-Try Street Food in Ghana</span>
+    </div>
+    <div className="placeholder bg-gray-0 p-2 rounded-lg">
+      <Link href="/exploring-ghanaian-cuisine">
+        <img src="/images/cuisine.avif" alt="Cuisine Placeholder" className="w-72 h-72 rounded-lg mb-4" />
+      </Link>
+      <span>Exploring Ghanaian Cuisine: A Culinary Adventure</span>
+    </div>
+  </div>
+</footer>
+
+
+
+      </div>
+      <Footer />
+    </>
+  );
 };
 
-export default ArticlePage
+export default FoodAndDrinksPage;
