@@ -6,7 +6,7 @@ import Link from 'next/link';
 const NavLink = ({ href, children }) => {
   return (
     <Link href={href}>
-      <id className="hover:bg-grey hover:text-black py-2 px-4 rounded-full">{children}</id>
+      <id className="block px-4 py-2 text-sm hover:bg-gray-100">{children}</id>
     </Link>
   );
 };
@@ -39,20 +39,11 @@ const Header = () => {
           {isReviewOpen && (
             <div className="absolute right-0 mt-2 w-64 bg-white border rounded-lg shadow-lg z-10">
               {/* Adventure Trips */}
-              <NavLink href="#" className="block px-4 py-2 text-sm hover:bg-gray-100">Adventure Trips</NavLink>
-              <p className="px-4 pb-2 text-sm text-gray-600">Hiking, mountain climbing, rafting.</p>
-              {/* Cultural Trips */}
-              <NavLink href="#" className="block px-4 py-2 text-sm hover:bg-gray-100">Cultural Trips</NavLink>
-              <p className="px-4 pb-2 text-sm text-gray-600">Historical tours, museum visits, city tours.</p>
-              {/* Relaxation Trips */}
-              <NavLink href="#" className="block px-4 py-2 text-sm hover:bg-gray-100">Relaxation Trips</NavLink>
-              <p className="px-4 pb-2 text-sm text-gray-600">Beach vacations, spa retreats.</p>
-              {/* Family Trips */}
-              <NavLink href="#" className="block px-4 py-2 text-sm hover:bg-gray-100">Family Trips</NavLink>
-              <p className="px-4 pb-2 text-sm text-gray-600">Family-friendly activities and destinations.</p>
-              {/* Customized Trips */}
-              <NavLink href="#" className="block px-4 py-2 text-sm hover:bg-gray-100">Customized Trips</NavLink>
-              <p className="px-4 pb-2 text-sm text-gray-600">Tailor-made trips based on individual preferences.</p>
+              <NavLink href="#">Adventure Trips</NavLink>
+              <NavLink href="#">Cultural Trips</NavLink>
+              <NavLink href="#">Relaxation Trips</NavLink>
+              <NavLink href="#">Family Trips</NavLink>
+              <NavLink href="#">Customized Trips</NavLink>
             </div>
           )}
         </div>
