@@ -4,9 +4,8 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 
 const BookingPage = () => {
-
   const [formData, setFormData] = useState({
-    date: null,
+    date: '',
     guests: 1,
     firstName: '',
     lastName: '',
@@ -20,7 +19,6 @@ const BookingPage = () => {
     nameOnCard: '',
     expiryDate: ''
   });
-  
 
   const [currentStep, setCurrentStep] = useState(1);
 
@@ -29,7 +27,8 @@ const BookingPage = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleNextStep = () => {
+  const handleNextStep = (e) => {
+    e.preventDefault();
     setCurrentStep(currentStep + 1);
   };
 
@@ -37,10 +36,50 @@ const BookingPage = () => {
     setCurrentStep(currentStep - 1);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Submit form data to backend for processing
-    console.log('Form submitted:', formData);
+
+    const data = {
+      title: `${formData.firstName} ${formData.lastName} Booking`,
+      content: `
+        <p>Date: ${formData.date}</p>
+        <p>Guests: ${formData.guests}</p>
+        <p>First Name: ${formData.firstName}</p>
+        <p>Last Name: ${formData.lastName}</p>
+        <p>Email: ${formData.email}</p>
+        <p>Phone Number: ${formData.phoneNumber}</p>
+        <p>Pickup Location: ${formData.pickupLocation}</p>
+        <p>Activity Language: ${formData.activityLanguage}</p>
+        <p>Promo Code: ${formData.promoCode}</p>
+        <p>Card Number: ${formData.cardNumber}</p>
+        <p>CVC: ${formData.cvc}</p>
+        <p>Name on Card: ${formData.nameOnCard}</p>
+        <p>Expiry Date: ${formData.expiryDate}</p>
+      `,
+      status: 'publish'
+    };
+
+    try {
+      const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJtaWNoZWxsZSIsImlhdCI6MTcxNDQ4ODQ1NywiZXhwIjoxODcyMTY4NDU3fQ.cg9eGdXaeKaKQiBtLscqfl7wUTq_BXUite33psQPjxk";
+      const response = await fetch('http://localhost/wordpress/wp-json/wp/v2/posts/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to post data to WordPress');
+      }
+
+      const responseData = await response.json();
+      console.log('Data posted to WordPress:', responseData);
+
+    } catch (error) {
+      console.error('Error posting data to WordPress:', error);
+    }
   };
 
   const renderStep = () => {
@@ -69,7 +108,7 @@ const BookingPage = () => {
             handleChange={handleChange}
             handleNextStep={handleNextStep}
             handlePreviousStep={handlePreviousStep}
-            handleSubmit={handleSubmit} // Pass handleSubmit as a prop
+            handleSubmit={handleSubmit}
           />
         );
       default:
@@ -81,15 +120,14 @@ const BookingPage = () => {
     <div className="flex flex-col min-h-screen">
       <Header />
       <div className="flex-grow container mx-auto py-8">
-      <h1 className="text-3xl font-bold mb-4 flex justify-center mb-8">Book Your Experience</h1>
+        <h1 className="text-3xl font-bold mb-4 flex justify-center mb-8">Book Your Experience</h1>
         {renderStep()}
       </div>
       <Footer />
     </div>
   );
-}
+};
 
-// Step1 component
 const Step1 = ({ formData, handleChange, handleNextStep }) => {
   return (
     <form onSubmit={handleNextStep} className="max-w-lg mx-auto space-y-4">
@@ -106,13 +144,16 @@ const Step1 = ({ formData, handleChange, handleNextStep }) => {
   );
 };
 
-// Step2 component
 const Step2 = ({ formData, handleChange, handleNextStep, handlePreviousStep }) => {
   return (
     <form onSubmit={handleNextStep} className="max-w-lg mx-auto space-y-4">
       <div className="mb-6">
-        <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name:</label>
-        <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
+        <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">First Name:</label>
+        <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
+      </div>
+      <div className="mb-6">
+        <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" value={formData.lastName} onChange={handleChange} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
       </div>
       <div className="mb-6">
         <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email:</label>
@@ -142,7 +183,6 @@ const Step2 = ({ formData, handleChange, handleNextStep, handlePreviousStep }) =
   );
 };
 
-// Step3 component
 const Step3 = ({ formData, handleChange, handleNextStep, handlePreviousStep, handleSubmit }) => {
   return (
     <form onSubmit={handleSubmit} className="max-w-lg mx-auto space-y-4">
