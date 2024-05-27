@@ -13,9 +13,14 @@ const NavLink = ({ href, children }) => {
 
 const Header = () => {
   const [isReviewOpen, setIsReviewOpen] = useState(false);
+  const [isMoreOpen, setIsMoreOpen] = useState(false);
 
   const toggleReview = () => {
     setIsReviewOpen(!isReviewOpen);
+  };
+
+  const toggleMore = () => {
+    setIsMoreOpen(!isMoreOpen);
   };
 
   return (
@@ -38,7 +43,7 @@ const Header = () => {
           {/* Dropdown content */}
           {isReviewOpen && (
             <div className="absolute right-0 mt-2 w-64 bg-white border rounded-lg shadow-lg z-10">
-              {/* Adventure Trips */}
+              {/* Trips options */}
               <NavLink href="#">Adventure Trips</NavLink>
               <NavLink href="#">Cultural Trips</NavLink>
               <NavLink href="#">Relaxation Trips</NavLink>
@@ -48,14 +53,30 @@ const Header = () => {
           )}
         </div>
 
+        {/* More dropdown */}
+        <div className="relative">
+          <button className="hover:bg-grey hover:text-black py-2 px-4 rounded-full" onClick={toggleMore}>
+            More
+          </button>
+          {/* Dropdown content */}
+          {isMoreOpen && (
+            <div className="absolute right-0 mt-2 w-64 bg-white border rounded-lg shadow-lg z-10">
+              {/* More options */}
+              <NavLink href="#">Flights</NavLink>
+              <NavLink href="#">Cruises</NavLink>
+              <NavLink href="#">Rental Cars</NavLink>
+              <NavLink href="#">Forums</NavLink>
+            </div>
+          )}
+        </div>
+
         <NavLink href="/write-review">Review</NavLink>
-        <NavLink href="#">More</NavLink>
       </div>
 
       <div className="flex items-center space-x-4">
-        <id href="/signin">
+        <NavLink href="/signin">
           <button className="bg-black text-white py-2 px-4 rounded-full cursor-pointer">Sign In</button>
-        </id>
+        </NavLink>
       </div>
     </header>
   );
