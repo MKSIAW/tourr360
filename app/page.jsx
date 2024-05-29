@@ -106,25 +106,24 @@ const Welcome = ({ user }) => {
                 style={{ width: "800px" }}
               />
               <FiSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
-
               {searchResults.length > 0 && (
-                <div className="absolute left-0 right-0 mt-2 bg-white border border-gray-300 rounded-lg shadow-lg z-10">
-                  <ul className="max-h-60 overflow-y-auto">
-                    {searchResults.map((result, index) => (
-                      <li
-                        key={index}
-                        className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                        onClick={() => {
-                          setInputValue(result.name);
-                          setSearchResults([]);
-                        }}
-                      >
-                        {result.name} 
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+  <div className="absolute left-0 right-0 mt-2 bg-white border border-gray-300 rounded-lg shadow-lg z-10">
+    <ul className="max-h-60 overflow-y-auto">
+      {searchResults.map((result, index) => (
+        <li key={index} className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+          {/* Wrap each search result item with a Link component */}
+          <Link href={`/${result.name.replace(/\s/g, '')}`} passHref>
+
+            <id onClick={() => setSearchResults([])}>
+              {result.name} 
+            </id>
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
+
             </div>
           </div>
 
@@ -151,10 +150,10 @@ const Welcome = ({ user }) => {
             <div className="flex gap-8">
               <div className="block transition duration-300 ease-in-out">
                 <div className="placeholder bg-gray-0 p-2 rounded-lg ">
-                  <Link href="/beaches">
+                  <Link href="/experience">
                     <img src="/images/elmina.jpg" alt="Placeholder 1" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
-                  <h3 className="text-xl font-semibold mb-2">Elmina Castle</h3>
+                  <h3 className="text-xl font-semibold mb-2">Customized Experience</h3>
                   <p className="text-gray-700 mb-2">Rating: 4.5</p>
                   <p className="text-gray-700">Price Range: GHS 50 - 100</p>
                 </div>
@@ -162,7 +161,7 @@ const Welcome = ({ user }) => {
 
               <div className="block transition duration-300 ease-in-out">
                 <div className="placeholder bg-gray-0 p-2 rounded-lg ">
-                  <Link href="/beaches">
+                  <Link href="/experience">
                     <img src="/images/polo.jpg" alt="Placeholder 2" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
                   <h3 className="text-xl font-semibold mb-2">Polo Beach House</h3>
@@ -173,7 +172,7 @@ const Welcome = ({ user }) => {
 
               <div className="block transition duration-300 ease-in-out">
                 <div className="placeholder bg-gray-0 p-2 rounded-lg ">
-                  <Link href="beaches">
+                  <Link href="experience">
                     <img src="/images/safari.avif" alt="Placeholder 3" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
                   <h3 className="text-xl font-semibold mb-2">Safari Valley</h3>
@@ -184,7 +183,7 @@ const Welcome = ({ user }) => {
 
               <div className="block transition duration-300 ease-in-out">
                 <div className="placeholder bg-gray-0 p-2 rounded-lg ">
-                  <Link href="/beaches">
+                  <Link href="/experience">
                     <img src="/images/slave.jpg" alt="Placeholder 4" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
                   <h3 className="text-xl font-semibold mb-2">Slave Market</h3>

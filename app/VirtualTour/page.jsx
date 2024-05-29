@@ -35,12 +35,15 @@ const Home = () => {
   const [lightboxIndex, setLightboxIndex] = useState(0);
 
   const handleMarkerClick = (imageSrc, speech) => {
-    console.log("Marker clicked!");
-    setCurrentImage(imageSrc); // Update the current image
+    setCurrentImage({ src: imageSrc }); // Update the current image
     setSpeechText(speech);
     speak({ text: speech });
     setIsPlaying(false);
   };
+  
+  
+  
+  
 
   const handlePlayPause = () => {
     setIsPlaying(prevState => !prevState);
@@ -76,11 +79,27 @@ const Home = () => {
     <div className="App relative">
       <div className="virtual-tour-container relative h-screen w-full">
         <ReactPhotoSphereViewer
-          src={currentImage} // Pass the current image source here
+          src={currentImage}
           height="100vh"
           width="100%"
           onRender={() => setIsPlaying(true)}
+          
         />
+        
+        <div className="absolute bottom-10 left-4 flex gap-4">
+          <button className="focus:outline-none" onClick={toggleModal}>
+            <FaBook className="text-white cursor-pointer" size={32} />
+          </button>
+          <button className="focus:outline-none" onClick={toggleLightbox}>
+            <FaImage className="text-white cursor-pointer" size={32} />
+          </button>
+          {speaking ? (
+            <FaPause className="text-white cursor-pointer" size={32} onClick={handlePause} />
+          ) : (
+            <FaPlay className="text-white cursor-pointer" size={32} onClick={handlePlayPause} />
+          )}
+        </div>
+
 
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <img
@@ -89,9 +108,10 @@ const Home = () => {
             className="cursor-pointer bg-transparent"
             width={20}
             height={50}
-            onClick={() => handleMarkerClick('./360/fountain.JPG', 'Moving to the fountain')}
+            onClick={() => handleMarkerClick('./360/GGUO5117.JPG', 'Moving to the fountain')}
           />
         </div>
+
 
         {lightboxOpen && (
           <div className="modal fixed top-0 left-0 w-full h-full flex items-end justify-center bg-black bg-opacity-50">
