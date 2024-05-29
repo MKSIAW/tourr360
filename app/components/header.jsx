@@ -48,7 +48,7 @@ const Header = () => {
               <NavLink href="#">Cultural Trips</NavLink>
               <NavLink href="#">Relaxation Trips</NavLink>
               <NavLink href="#">Family Trips</NavLink>
-              <NavLink href="#">Customized Trips</NavLink>
+              <NavLink href="/customize">Customized Trips</NavLink>
             </div>
           )}
         </div>
