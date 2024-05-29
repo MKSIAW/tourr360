@@ -145,8 +145,8 @@ const Welcome = ({ user }) => {
           </div>
 
           <div className="text-left mt-20">
-            <h2 className="text-3xl font-bold mb-4">Ways to Tour Accra</h2>
-            <p className="text-lg mb-8">Book these experiences for a close-up look at Accra</p>
+            <h2 className="text-3xl font-bold mb-4 ml-4">Ways to Tour Accra</h2>
+            <p className="text-lg mb-8 ml-4">Book these experiences for a close-up look at Accra</p>
             <div className="flex gap-8">
               <div className="block transition duration-300 ease-in-out">
                 <div className="placeholder bg-gray-0 p-2 rounded-lg ">
@@ -154,8 +154,8 @@ const Welcome = ({ user }) => {
                     <img src="/images/elmina.jpg" alt="Placeholder 1" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
                   <h3 className="text-xl font-semibold mb-2">Customized Experience</h3>
-                  <p className="text-gray-700 mb-2">Rating: 4.5</p>
-                  <p className="text-gray-700">Price Range: GHS 50 - 100</p>
+                  <p className="text-green-500 mb-2">Rating: 4.5</p>
+                  <p className="text-green-500">Price Range: GHS 50 - 100</p>
                 </div>
               </div>
 
@@ -165,8 +165,8 @@ const Welcome = ({ user }) => {
                     <img src="/images/polo.jpg" alt="Placeholder 2" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
                   <h3 className="text-xl font-semibold mb-2">Polo Beach House</h3>
-                  <p className="text-gray-700 mb-2">Rating: 4.2</p>
-                  <p className="text-gray-700">Price Range: GHS 30 - 80</p>
+                  <p className="text-green-500 mb-2">Rating: 4.2</p>
+                  <p className="text-green-500">Price Range: GHS 30 - 80</p>
                 </div>
               </div>
 
@@ -176,8 +176,8 @@ const Welcome = ({ user }) => {
                     <img src="/images/safari.avif" alt="Placeholder 3" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
                   <h3 className="text-xl font-semibold mb-2">Safari Valley</h3>
-                  <p className="text-gray-700 mb-2">Rating: 4.7</p>
-                  <p className="text-gray-700">Price Range: GHS 100 - 300</p>
+                  <p className="text-green-500 mb-2">Rating: 4.7</p>
+                  <p className="text-green-500">Price Range: GHS 100 - 300</p>
                 </div>
               </div>
 
@@ -187,8 +187,8 @@ const Welcome = ({ user }) => {
                     <img src="/images/slave.jpg" alt="Placeholder 4" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
                   <h3 className="text-xl font-semibold mb-2">Slave Market</h3>
-                  <p className="text-gray-700 mb-2">Rating: 4.9</p>
-                  <p className="text-gray-700">Price Range: GHS 80 - 200</p>
+                  <p className="text-green-500 mb-2">Rating: 4.9</p>
+                  <p className="text-green-500">Price Range: GHS 80 - 200</p>
                 </div>
               </div>
             </div>

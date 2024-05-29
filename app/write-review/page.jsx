@@ -1,11 +1,32 @@
 'use client'
-
+import { useState } from 'react';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import React from 'react';
 import { FiSearch } from 'react-icons/fi';
 
 const ReviewPage = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+
+  const touristSites = [
+    { name: 'Kwame Nkrumah Mausoleum', location: 'Accra' },
+    { name: 'Elmina Castle', location: 'Cape Coast' },
+    { name: 'Labadi Beach', location: 'Accra' },
+    // Add more tourist sites here...
+  ];
+
+  const handleSearchInputChange = (e) => {
+    setSearchQuery(e.target.value);
+    // Filter tourist sites based on search query
+    const filteredResults = touristSites.filter((site) =>
+      site.name.toLowerCase().includes(e.target.value.toLowerCase())
+    );
+    setSearchResults(filteredResults);
+  };
+
+
+
   return (
     <div>
       <Header />
@@ -34,6 +55,20 @@ const ReviewPage = () => {
 
   </div>
 </div>
+
+<div className="max-w-3xl mx-auto mb-24 mt-24">
+          {searchResults.map((site, index) => (
+            <div key={index} className="border rounded-lg overflow-hidden p-4 mb-4">
+              <h2 className="text-xl font-semibold text-gray-900 mb-2">{site.name}</h2>
+              <p className="text-gray-600 mb-1">Location: {site.location}</p>
+              <Link href={`/review/${site.name.toLowerCase().replace(/\s/g, '')}`}>
+                <a className="text-blue-500 hover:underline">Write a Review</a>
+              </Link>
+            </div>
+          ))}
+          </div>
+
+
 
 
 <div className="max-w-3xl mx-auto mb-24 mt-24">

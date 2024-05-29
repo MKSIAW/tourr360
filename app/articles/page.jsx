@@ -117,7 +117,7 @@ const ExplorePage = () => {
 
         <div className="explore-section py-8 mb-10">
           <div className="container mx-auto">
-           <h2 className="text-3xl font-semibold mb-8">Get outside this summer</h2>
+           <h2 className="text-3xl font-semibold mb-8 ml-4">Get outside this summer</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ">
 
             <div className="relative flex flex-col justify-between items-center bg-white rounded-lg p-2">
@@ -132,7 +132,7 @@ const ExplorePage = () => {
     </button>
   </div>
   <h3 className="text-xl text-center mt-4 font-arial font-semibold mb-2">7 Best Beaches to Visit During Summer</h3>
-  <p className="text-gray-600 text-center font-arial mb-4">Discover stunning beaches to relax and enjoy the sun.</p>
+  <p className="text-green-500 text-center font-arial mb-4">Discover stunning beaches to relax and enjoy the sun.</p>
   <div className="flex justify-between w-full mb-4">
     
   </div>
@@ -152,7 +152,7 @@ const ExplorePage = () => {
     </button>
     </div>
                 <h3 className="text-xl text-center mt-4 font-arial font-semibold mb-2">5 Best Hiking Trails for Summer</h3>
-                <p className="text-gray-600  text-center font-arial mb-4">Explore the great outdoors and discover the best hiking trails this summer.</p>
+                <p className="text-green-500  text-center font-arial mb-4">Explore the great outdoors and discover the best hiking trails this summer.</p>
                 <div className="flex justify-between w-full mb-4">
                   
                 </div>
@@ -171,7 +171,7 @@ const ExplorePage = () => {
     </button>
     </div>
                 <h3 className="text-xl text-center mt-4 font-arial font-semibold mb-2">Top 3 City Breaks for Summer</h3>
-                <p className="text-gray-600 text-center font-arial mb-4">Discover the best cities to explore and experience this summer.</p>
+                <p className="text-green-500 text-center font-arial mb-4">Discover the best cities to explore and experience this summer.</p>
                 <div className="flex justify-between w-full mb-4">
                   
                 </div>

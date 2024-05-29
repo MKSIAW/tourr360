@@ -259,8 +259,8 @@ const Beaches = () => {
                     <img src="/images/Aburi.jpg" alt="Placeholder 1" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
                   <h3 className="text-xl font-semibold mb-2">Boti Falls & Aburi Gardens Experience</h3>
-                  <p className="text-gray-700 mb-2">Rating: 4.5</p>
-                  <p className="text-gray-700">Price Range: GHS 50 - 100</p>
+                  <p className="text-green-500 mb-2">Rating: 4.5</p>
+                  <p className="text-green-500">Price Range: GHS 50 - 100</p>
                 </div>
               </div>
 
@@ -270,8 +270,8 @@ const Beaches = () => {
                     <img src="/images/shai.webp" alt="Placeholder 2" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
                   <h3 className="text-xl font-semibold mb-2">Private tour of Shai Hills Reserves, <p>Volta river & bead factory</p></h3>
-                  <p className="text-gray-700 mb-2">Rating: 4.2</p>
-                  <p className="text-gray-700">Price Range: GHS 30 - 80</p>
+                  <p className="text-green-500 mb-2">Rating: 4.2</p>
+                  <p className="text-green-500">Price Range: GHS 30 - 80</p>
                 </div>
               </div>
 
@@ -281,8 +281,8 @@ const Beaches = () => {
                     <img src="/images/53.jpg" alt="Placeholder 3" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
                   <h3 className="text-xl font-semibold mb-2">Nature Thrills</h3>
-                  <p className="text-gray-700 mb-2">Rating: 4.7</p>
-                  <p className="text-gray-700">Price Range: GHS 100 - 300</p>
+                  <p className="text-green-500 mb-2">Rating: 4.7</p>
+                  <p className="text-green-500">Price Range: GHS 100 - 300</p>
                 </div>
               </div>
 
@@ -292,8 +292,8 @@ const Beaches = () => {
                     <img src="/images/nature.jpeg" alt="Placeholder 4" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
                   <h3 className="text-xl font-semibold mb-2">Legon Botanical Garden and <p>Kwame Nkrumah Museum experience</p> </h3>
-                  <p className="text-gray-700 mb-2">Rating: 4.9</p>
-                  <p className="text-gray-700">Price Range: GHS 80 - 200</p>
+                  <p className="text-green-500 mb-2">Rating: 4.9</p>
+                  <p className="text-green-500">Price Range: GHS 80 - 200</p>
                 </div>
               </div>
             </div>
