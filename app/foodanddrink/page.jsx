@@ -51,6 +51,8 @@ const FoodAndDrinksPage = () => {
          
         </section>
         <footer className="text-center mt-8">
+
+          
   <p className="text-xl font-bold mb-4">Related Stories</p>
   <div className="flex justify-center space-x-4">
     <div className="placeholder bg-gray-0 p-2 rounded-lg">

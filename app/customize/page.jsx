@@ -4,17 +4,32 @@ import Head from 'next/head';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import { FiSearch } from 'react-icons/fi';
+import Link from 'next/link';
 
 const CustomizeTripPage = () => {
+  const touristSites = [
+    { id: 1, name: 'Boti Falls' },
+    { id: 2, name: 'Elmina Castle' },
+    { id: 3, name: 'Safari Valley Resort' },
+    // Add more tourist sites as needed
+  ];
+
+
   const [tripName, setTripName] = useState('');
   const [destination, setDestination] = useState('');
   const [stayOption, setStayOption] = useState('dates'); // 'dates' or 'days'
   const [dates, setDates] = useState('');
   const [days, setDays] = useState('');
+  const [showPopup, setShowPopup] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedSite, setSelectedSite] = useState(null);
+  const [searchResults, setSearchResults] = useState([]);
+
 
   const handleCreateTrip = () => {
     // Handle trip creation logic here
     console.log('Trip Created:', { tripName, destination, stayOption, dates, days });
+    setShowPopup(true); // Show the popup when trip is created
   };
 
   const handleCancel = () => {
@@ -25,6 +40,26 @@ const CustomizeTripPage = () => {
     setDates('');
     setDays('');
   };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
+  const handleSearch = (e) => {
+    const value = e.target.value;
+    setSearchTerm(value);
+    const results = touristSites.filter(site =>
+      site.name.toLowerCase().includes(value.toLowerCase())
+    );
+    setSearchResults(results);
+  };
+
+  const handleSelectSite = (site) => {
+    setSelectedSite(site);
+    setDestination(site.name);
+    setSearchTerm('');
+    setSearchResults([]);
+  };
+
 
   return (
     <div>
@@ -59,15 +94,25 @@ const CustomizeTripPage = () => {
               Destination
             </label>
             <div className="relative">
-              <input
+            <input
                 type="text"
                 id="destination"
                 value={destination}
                 onChange={(e) => setDestination(e.target.value)}
                 className="w-full p-3 border rounded-lg"
                 placeholder="Search for a destination"
-              />
-              <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                onFocus={() => setSearchResults(touristSites)}
+                onBlur={() => setTimeout(() => setSearchResults([]), 200)}
+                onChange={handleSearch}/>
+              {searchResults.length > 0 && (
+                <ul className="absolute top-full left-0 w-full bg-white border border-gray-300 rounded-b-lg shadow-md">
+                  {searchResults.map(site => (
+                    <li key={site.id} className="cursor-pointer py-2 px-4 hover:bg-gray-100" onClick={() => handleSelectSite(site)}>
+                      {site.name}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           </div>
 
@@ -121,9 +166,23 @@ const CustomizeTripPage = () => {
             >
               Cancel
             </button>
-          </div>
+
+            {showPopup && (
+            <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
+              <div className="bg-white p-8 rounded-lg shadow-md text-center">
+                <p className="text-2xl font-bold mb-4">Trip Created!</p>
+                <Link href="/booking"> 
+                <id className="bg-green-500 text-white px-4 py-2 rounded-lg font-bold inline-block">Book Now</id>
+              </Link>
+              </div>
+            </div>
+          )}
         </div>
+        
+        </div>
+      
       </main>
+          
 
       <Footer />
     </div>

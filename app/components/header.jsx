@@ -44,10 +44,7 @@ const Header = () => {
           {isReviewOpen && (
             <div className="absolute right-0 mt-2 w-64 bg-white border rounded-lg shadow-lg z-10">
               {/* Trips options */}
-              <NavLink href="#">Adventure Trips</NavLink>
-              <NavLink href="#">Cultural Trips</NavLink>
-              <NavLink href="#">Relaxation Trips</NavLink>
-              <NavLink href="#">Family Trips</NavLink>
+        
               <NavLink href="/customize">Customized Trips</NavLink>
             </div>
           )}
@@ -62,10 +59,9 @@ const Header = () => {
           {isMoreOpen && (
             <div className="absolute right-0 mt-2 w-64 bg-white border rounded-lg shadow-lg z-10">
               {/* More options */}
-              <NavLink href="#">Flights</NavLink>
+            
               <NavLink href="#">Cruises</NavLink>
-              <NavLink href="#">Rental Cars</NavLink>
-              <NavLink href="#">Forums</NavLink>
+              
             </div>
           )}
         </div>
