@@ -95,6 +95,52 @@ const ReviewPage = () => {
           ))}
         </div>
 
+
+        <div className="max-w-3xl mx-auto mb-24 mt-24">
+  <div className="border rounded-lg overflow-hidden p-4">
+    <h2 className="text-xl font-semibold text-gray-900 mb-4">Been Here?</h2>
+    <div className="flex items-center">
+      <div className="flex flex-grow">
+        <div className="mr-8">
+          <a href="/KwameNkrumahMausoleum">
+            <img src="/images/kwams.jpg" alt="Image 1" className="w-60 h-40 rounded-lg mb-4" />
+          </a>
+          <h3 className="text-lg font-semibold">Kwame Nkrumah Mausoleum</h3>
+          <p className="text-gray-600 mb-1">Location: Accra</p>
+          <div className="flex items-center">
+            <p className="text-yellow-500 text-xl">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+            <p className="text-gray-600 ml-2">(4.0)</p>
+          </div>
+        </div>
+        <div className="mr-8">
+          <a href="/ElminaCastle">
+            <img src="/images/elmina.jpeg" alt="Image 2" className="w-60 h-40 rounded-lg mb-4" />
+          </a>
+          <h3 className="text-lg font-semibold">Elmina Castle</h3>
+          <p className="text-gray-600 mb-1">Location: Cape Coast</p>
+          <div className="flex items-center">
+            <p className="text-yellow-500 text-xl">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+            <p className="text-gray-600 ml-2">(4.0)</p>
+          </div>
+        </div>
+        <div>
+          <a href="/SafariValley">
+            <img src="/images/safari.jpg" alt="Image 3" className="w-60 h-40 rounded-lg mb-4" />
+          </a>
+          <h3 className="text-lg font-semibold">Safari Valley</h3>
+          <p className="text-gray-600 mb-1">Location: Accra</p>
+          <div className="flex items-center">
+            <p className="text-yellow-500 text-xl">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+            <p className="text-gray-600 ml-2">(4.0)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
         <div className="grid grid-cols-2 gap-12">
           <div className="bg-gray-100 p-6 rounded-lg">
             <h2 className="text-xl font-semibold text-gray-900 mb-4">Your Reviews</h2>
