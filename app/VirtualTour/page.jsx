@@ -15,7 +15,7 @@ const ReactPhotoSphereViewer = dynamic(
 
 const Home = () => {
   const { speak, speaking, cancel } = useSpeechSynthesis();
-  const [currentImage, setCurrentImage] = useState('./360/reception.jpg');
+  const [currentImage, setCurrentImage] = useState('./360/GGUO5117.JPG');
   const [placeImages] = useState([
     './images/kwame.jpg',
     './images/kwame2.jpg',

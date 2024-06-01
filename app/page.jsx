@@ -19,26 +19,25 @@ const Welcome = ({ user }) => {
   };
 
   const data = [
-    {name: "Elmina Castle"},
-    {name: "Polo Beach House" },
-    {name: "Safari Valley" },
-    {name: "Slave Market" },
-    {name: "Nzulenzu Stilt Village"},
-    {name: "Tano Boase Sacred"},
-    {name: "Shai Hills Resource Reserve"},
-    {name: "Boti Falls"},
-    {name: "Manhyia Palace"},
-    {name: "Santoku"},
-    {name: "Marina Park"},
-    {name: "Gimpa"},
-    {name: "Bojo Beach"},
-    {name: "Kempinski"},
-    {name: "Mole National Park"},
-    {name: "Legon Botanical Gardens"},
-    {name: "Kakum National Park"},
-    {name: "Kwame Nkrumah Mauseleoum "},
-    {name: "Aburi Gardens"},
-
+    { name: "Elmina Castle" },
+    { name: "Polo Beach House" },
+    { name: "Safari Valley" },
+    { name: "Slave Market" },
+    { name: "Nzulenzu Stilt Village" },
+    { name: "Tano Boase Sacred" },
+    { name: "Shai Hills Resource Reserve" },
+    { name: "Boti Falls" },
+    { name: "Manhyia Palace" },
+    { name: "Santoku" },
+    { name: "Marina Park" },
+    { name: "Gimpa" },
+    { name: "Bojo Beach" },
+    { name: "Kempinski" },
+    { name: "Mole National Park" },
+    { name: "Legon Botanical Gardens" },
+    { name: "Kakum National Park" },
+    { name: "Kwame Nkrumah Mausoleum" },
+    { name: "Aburi Gardens" },
   ];
 
   const handleSearch = () => {
@@ -54,14 +53,14 @@ const Welcome = ({ user }) => {
   };
 
   return (
-    <div>
+    <div className="welcome-container zoom-out">
       <Head>
         <title>Welcome to Tour360</title>
         <meta name="description" content="Welcome to Tour360 - Your ultimate tour guide!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <div className="welcome-container text-center text-gray-800 mt-8">
+      <div className="text-center text-gray-800 mt-8">
         <main>
           <h2 className="text-4xl font-bold mb-16">{whereToText}</h2>
           <div className="flex justify-center space-x-8 mb-10">
@@ -107,38 +106,35 @@ const Welcome = ({ user }) => {
               />
               <FiSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
               {searchResults.length > 0 && (
-  <div className="absolute left-0 right-0 mt-2 bg-white border border-gray-300 rounded-lg shadow-lg z-10">
-    <ul className="max-h-60 overflow-y-auto">
-      {searchResults.map((result, index) => (
-        <li key={index} className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-          {/* Wrap each search result item with a Link component */}
-          <Link href={`/${result.name.replace(/\s/g, '')}`} passHref>
-
-            <id onClick={() => setSearchResults([])}>
-              {result.name} 
-            </id>
-          </Link>
-        </li>
-      ))}
-    </ul>
-  </div>
-)}
-
+                <div className="absolute left-0 right-0 mt-2 bg-white border border-gray-300 rounded-lg shadow-lg z-10">
+                  <ul className="max-h-60 overflow-y-auto">
+                    {searchResults.map((result, index) => (
+                      <li key={index} className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                        <Link href={`/${result.name.replace(/\s/g, '')}`} passHref>
+                          <id onClick={() => setSearchResults([])}>
+                            {result.name}
+                          </id>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
 
           <div className="placeholder-container text-center mt-20">
             <div className="placeholder bg-gray-0 p-4 w-350 mx-auto relative rounded-xl">
               <img src="/images/choice.avif" alt="Hotels" className="w-full rounded-lg mb-4" />
-              <div className="absolute bottom-10 left-10 w-full text-left">
+              <div className="absolute bottom-10 left-10 w-50 text-left">
                 <h2 className="text-3xl font-bold text-white font-arial mb-1">Ghana's Best Hotels for 2024</h2>
-                <p className="text-1xl text-white font-arial mb-4">
+                <p className="text-1xl text-white font-arial mb-6">
                   See our Tourist Choice Awards Best of the Best Winners
                 </p>
                 <Link href="/hotels">
-                  <id className="bg-white hover:bg-gray-100 text-black font-bold py-2 px-4 rounded-3xl font-arial text-xl">
+                  <div className="bg-white hover:bg-gray-100 text-black font-bold py-2 px-3 rounded-3xl font-arial text-xl" style={{ maxWidth: '200px' }}>
                     Explore the List
-                  </id>
+                  </div>
                 </Link>
               </div>
             </div>
