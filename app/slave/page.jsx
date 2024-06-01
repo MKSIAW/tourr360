@@ -18,17 +18,18 @@ const Beaches = () => {
     <>
       <Header />
       <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-4 text-center">Elmina Castle, Polo Beach House, Safari Valley, Slave Market Experience</h1>
-        <div className="flex items-center justify-center items-center mb-6 ">
-          <FaStar className="text-yellow-500 mr-2" />
-          <span>5 reviews</span>
-        </div>
+      <h1 className="text-3xl font-bold mb-4 text-center">Salaga Slave Maket</h1>
+      <div className="flex justify-center items-center mb-4">
+  <FaStar className="text-yellow-500" />
+  <span className="ml-1">5 reviews</span>
+</div>
+
 
         <div className="flex gap-4 mb-4">
-  <img src="/images/Elmina.jpg" alt="Image 1" className="rounded-lg w-1/2" /> {/* Adjusted width */}
+  <img src="/images/slave.jpg" alt="Image 1" className="rounded-lg w-1/2" /> {/* Adjusted width */}
   <div className="flex flex-col w-1/2 gap-4"> {/* Container for the other two images */}
-    <img src="/images/safari.avif" alt="Image 2" className="rounded-lg h-1/2" /> {/* Adjusted height */}
-    <img src="/images/polo.jpg" alt="Image 3" className="rounded-lg h-1/2" /> {/* Adjusted height */}
+    <img src="/images/slave2.jpeg" alt="Image 2" className="rounded-lg h-1/2" /> 
+    <img src="/images/slave3.jpg" alt="Image 3" className="rounded-lg h-1/2" /> 
   </div>
 </div>
 
@@ -38,18 +39,9 @@ const Beaches = () => {
             <h2 className="text-xl font-bold mb-2">About</h2>
             <p className="mb-4">Our Tours as always gives you more, our well-traveled Tour Guides will make your adventures in Ghana....You will have a professional driver and a guide who is very knowledgeable and fun to be with. All your requests while on the tour will be answered...</p>
             <div className="mb-4">
-  <ol className="list-decimal list-inside">
+  <ol className="list-decimal list-inside"> 
     <li>
-      Polo Beach House: A serene retreat nestled along the coastline, Polo Beach House offers luxurious accommodations, breathtaking ocean views, and world-class hospitality, making it the perfect destination for relaxation and rejuvenation.
-    </li>
-    <li>
-      Elmina Castle: Steeped in history, Elmina Castle stands as a poignant reminder of Ghana's colonial past. This UNESCO World Heritage Site served as a hub for the transatlantic slave trade and now serves as a powerful memorial and educational center.
-    </li>
-    <li>
-      Safari Valley: Embark on an unforgettable adventure in Safari Valley, where breathtaking landscapes, diverse wildlife, and thrilling safari experiences await. Explore the natural beauty of the African savannah and discover the wonders of the wilderness.
-    </li>
-    <li>
-      Slave Market: A sobering reminder of humanity's darkest chapter, the Slave Market stands as a historic site where countless individuals were bought and sold as commodities. Today, it serves as a memorial to honor the memory of those who suffered under the brutalities of the transatlantic slave trade.
+      Slave Market: Once a major hub in the trans-Saharan trade, the Salaga Slave Market in northern Ghana played a significant role in the slave trade during the 18th and 19th centuries. Today, it serves as an important historical site, reminding visitors of the brutal realities of slavery and the resilience of those who suffered.
     </li>
   </ol>
 </div>
@@ -77,7 +69,7 @@ const Beaches = () => {
     </div>
     {/* Tour Details */}
     <div className="border border-gray-200 rounded-lg p-4 mb-4">
-  <p>Elmina Castle, Polo Beach House, Safari Valley, Slave Market Experience</p>
+  <p>Elmina Castle Experience</p>
   <div className="border-b border-gray-300 mb-2">
     <h2 className="text-xl font-bold mb-2">Reserve Now, Pay Later!</h2>
   </div>
@@ -101,6 +93,7 @@ const Beaches = () => {
 
 
         </div>
+
 
         <div className="col">
           <div className="mb-4">
@@ -126,9 +119,30 @@ const Beaches = () => {
                 <div className="mb-4">
   <h2 className="text-xl font-bold mb-2">Itinerary</h2>
   <div className="mb-4">
-    <b>Stop At: Boti Falls, Boti, Boti Ghana</b>
+    <b>Day 1: Departure from Accra to Tamale</b>
     <p>
-      Boti falls is a twin waterfall located at Boti in the Eastern Region of Ghana. At Boti Falls we will descend the 250 steps to visit the twin waterfalls. Over here we will relax at the bank of the falls with snacks and cold drinks, we will take a dugout tour on a canoe and anyone seeking more adventure can swim in the falls for a great refreshing moments.
+    Depart from Accra by flight to Tamale (1-hour flight).
+    Flights are available from Kotoka International Airport (ACC) to Tamale Airport (TML).
+    Arrive in Tamale and transfer to your hotel.
+    Check-in and have lunch at the hotel or a nearby restaurant.
+    Explore Tamale briefly. Visit the Tamale Cultural Centre or the local markets.
+    Dinner at a local restaurant or your hotel.
+    </p>
+    <p> 
+      Duration: 2 hours
+    </p>
+  </div>
+
+  <div className="mb-4">
+    <b>Day 2: Journey to Salaga</b>
+    <p>
+    Breakfast at the hotel.
+    Depart from Tamale to Salaga by car (approximately 3-4 hours drive).
+    Arrive in Salaga and check into a local guesthouse or hotel.
+    Have lunch at a local eatery.
+    Visit the Salaga Slave Market site. Explore the historical market, slave wells, and the remnants of the slave trade.
+    Learn about the history and significance of Salaga in the trans-Saharan trade.
+
     </p>
     <p>
       Duration: 2 hours
@@ -136,42 +150,32 @@ const Beaches = () => {
   </div>
 
   <div className="mb-4">
-    <b>Stop At: Aburi Botanical Gardens, Aburi Ghana</b>
+    <b>Day 3: Explore Salaga and Return to Tamale</b>
     <p>
-      We will visit the Aburi Botanical Gardens, a popular place with birds and butterflies. Here we will have a guided tour where we learn the history and the local trees and plant species Tour around the gardens to know about the origin, age and medicinal properties of plants in the gardens. The main entrance welcoming with the palm walk comprising of an avenue of elegant palm The Bush House, The Rock Garden, The Pergola or Lovers lane, The Ficus tree, The retired helicopter School of horticulture.
+    Breakfast at the guesthouse/hotel.
+Continue exploring Salaga. Visit other historical landmarks and engage with the local community.
+Depart from Salaga back to Tamale.
+Lunch en route or upon arrival in Tamale.
+Arrive in Tamale and check back into your hotel.
+Relax and have dinner at the hotel or a nearby restaurant.
+    </p>
+    <p>
+      Duration: 30 minutes
+    </p>
+  </div>
+
+  <div className="mb-4">
+    <b>Day 4: Return to Accra</b>
+    <p>
+    Breakfast at the hotel.
+Transfer to Tamale Airport for your flight back to Accra.
+Arrive in Accra.
+End of the itinerary.
+
+
     </p>
     <p>
       Duration: 2 hours
-    </p>
-  </div>
-
-  <div className="mb-4">
-    <b>Stop At: Umbrella Rock, Asiafo Amanfro, Koforidua Ghana</b>
-    <p>
-      Umbrella rock (45 Minutes Hike)..one can choose to walk in the forest through to the Rock and the 3 headed palm tree or take the easy road with a car..
-    </p>
-    <p>
-      Duration: 30 minutes
-    </p>
-  </div>
-
-  <div className="mb-4">
-    <b>Stop At: Boti, Boti, Eastern Region</b>
-    <p>
-      Three-headed palm tree at Boti falls in the Eastern Region of Ghana. Surprisingly, the heads take turns in bearing fruits each year. You will never find two heads palm anywhere lol.. mystery of the world
-    </p>
-    <p>
-      Duration: 30 minutes
-    </p>
-  </div>
-
-  <div className="mb-4">
-    <b>Stop At: Tetteh Quarshie Avenue, Tetteh Quarshie Ave, Accra, Ghana</b>
-    <p>
-      Ever wondered where chocolate comes from? Well, we’ll take you to the very beginning of chocolate – the cocoa tree. At the Tetteh Quarshie Cocoa Farm, you learn a bit of the history of Cocoa in Ghana.. At the cocoa farm we will learn about the first cocoa farm in Ghana, life span of cocoa and socio-economic benefits to the country. We will have the chance to taste cocoa and get a feel of how natural cocoa is like.
-    </p>
-    <p>
-      Duration: 1 hour
     </p>
   </div>
 </div>
@@ -262,10 +266,10 @@ const Beaches = () => {
             <div className="flex gap-8">
               <div className="block transition duration-300 ease-in-out">
                 <div className="placeholder bg-gray-0 p-2 rounded-lg ">
-                  <Link href="/ElminaCastle">
+                  <Link href="boti">
                     <img src="/images/Aburi.jpg" alt="Placeholder 1" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
-                  <h3 className="text-xl font-semibold mb-2">Elmina Castle Experience</h3>
+                  <h3 className="text-xl font-semibold mb-2">Boti Falls & Aburi Gardens Experience</h3>
                   <p className="text-green-500 mb-2">Rating: 4.5</p>
                   <p className="text-green-500">Price Range: GHS 50 - 100</p>
                 </div>
