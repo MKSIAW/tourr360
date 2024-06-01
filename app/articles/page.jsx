@@ -51,57 +51,57 @@ const ExplorePage = () => {
 
           <div class="flex items-center justify-center -mx-8">
   <div class="w-full sm:w-1/2 mb-2 sm:mb-0 px-2">
-    <Link href="/places-to-visit">
+    <Link href="/movenpick">
     <img src="/images/villagio.jpg" alt="Visit Placeholder 1" class="w-full rounded-lg h-96" />
     </Link>
   </div>
 
   <div class="w-full sm:w-1/2 flex flex-col justify-between px-2">
     <div class="w-full mb-2">
-    <Link href="/places-to-visit">
+    <Link href="/PoloBeachHouse">
       <img src="/images/polo.jpg" alt="Visit Placeholder 2" class="w-full rounded-lg h-72" />
       </Link>
     </div>
     <div class="w-full">
-    <Link href="/places-to-visit">
-      <img src="/images/jazz.jpg" alt="Visit Placeholder 3" class="w-full rounded-lg h-72" />
+    <Link href="/ElminaCastle">
+      <img src="/images/elmina.jpg" alt="Visit Placeholder 3" class="w-full rounded-lg h-72" />
       </Link>
     </div>
   </div>
 
   <div class="w-full sm:w-1/2 mb-2 sm:mb-0 px-2">
-  <Link href="/places-to-visit">
+  <Link href="/SafariValley">
     <img src="/images/safari.avif" alt="Visit Placeholder 4" class="w-full rounded-lg h-96" />
     </Link>
   </div>
 
   <div class="w-full sm:w-1/2 flex flex-col justify-between px-2">
     <div class="w-full mb-2">
-    <Link href="/places-to-visit">
+    <Link href="/KwameNkrumahMausoleum">
       <img src="/images/kwams.jpg" alt="Visit Placeholder 5" class="w-full rounded-lg h-72" />
       </Link>
     </div>
     <div class="w-full">
-    <Link href="/places-to-visit">
+    <Link href="/BotiFalls">
       <img src="/images/lake.jpg" alt="Visit Placeholder 6" class="w-full rounded-lg h-72" />
       </Link>
     </div>
   </div>
 
   <div class="w-full sm:w-1/2 mb-2 sm:mb-0 px-2">
-  <Link href="/places-to-visit">
+  <Link href="/movenpick">
     <img src="/images/kempinski.jpg" alt="Visit Placeholder 7" class="w-full rounded-lg h-96" />
     </Link>
   </div>
 
   <div class="w-full sm:w-1/2 flex flex-col justify-between px-2">
-    <div class="w-full mb-2">
-    <Link href="/places-to-visit">
+    <div class="boti">
+    <Link href="/BotiFalls">
       <img src="/images/kintampo.jpg" alt="Visit Placeholder 8" class="w-full rounded-lg h-72" />
       </Link>
     </div>
     <div class="w-full">
-    <Link href="/places-to-visit">
+    <Link href="/movenpick">
       <img src="/images/choice.jpg" alt="Visit Placeholder 9" class="w-full rounded-lg h-72" />
       </Link>
     </div>

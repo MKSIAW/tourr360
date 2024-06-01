@@ -23,21 +23,9 @@ const Welcome = ({ user }) => {
     { name: "Polo Beach House" },
     { name: "Safari Valley" },
     { name: "Slave Market" },
-    { name: "Nzulenzu Stilt Village" },
-    { name: "Tano Boase Sacred" },
-    { name: "Shai Hills Resource Reserve" },
     { name: "Boti Falls" },
-    { name: "Manhyia Palace" },
-    { name: "Santoku" },
-    { name: "Marina Park" },
-    { name: "Gimpa" },
-    { name: "Bojo Beach" },
-    { name: "Kempinski" },
-    { name: "Mole National Park" },
-    { name: "Legon Botanical Gardens" },
-    { name: "Kakum National Park" },
     { name: "Kwame Nkrumah Mausoleum" },
-    { name: "Aburi Gardens" },
+
   ];
 
   const handleSearch = () => {
@@ -157,7 +145,7 @@ const Welcome = ({ user }) => {
 
               <div className="block transition duration-300 ease-in-out">
                 <div className="placeholder bg-gray-0 p-2 rounded-lg ">
-                  <Link href="/polo">
+                  <Link href="/PoloBeachHouse">
                     <img src="/images/polo.jpg" alt="Placeholder 2" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
                   <h3 className="text-xl font-semibold mb-2">Polo Beach House</h3>
@@ -168,7 +156,7 @@ const Welcome = ({ user }) => {
 
               <div className="block transition duration-300 ease-in-out">
                 <div className="placeholder bg-gray-0 p-2 rounded-lg ">
-                  <Link href="safari">
+                  <Link href="SafariValley">
                     <img src="/images/safari.avif" alt="Placeholder 3" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
                   <h3 className="text-xl font-semibold mb-2">Safari Valley</h3>
@@ -179,7 +167,7 @@ const Welcome = ({ user }) => {
 
               <div className="block transition duration-300 ease-in-out">
                 <div className="placeholder bg-gray-0 p-2 rounded-lg ">
-                  <Link href="/slave">
+                  <Link href="/SlaveMarket">
                     <img src="/images/slave.jpg" alt="Placeholder 4" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
                   <h3 className="text-xl font-semibold mb-2">Slave Market</h3>

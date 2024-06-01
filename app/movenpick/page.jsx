@@ -18,17 +18,18 @@ const Beaches = () => {
     <>
       <Header />
       <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-4 text-center">Elmina Castle, Polo Beach House, Safari Valley, Slave Market Experience</h1>
-        <div className="flex items-center justify-center items-center mb-6 ">
-          <FaStar className="text-yellow-500 mr-2" />
-          <span>5 reviews</span>
-        </div>
+      <h1 className="text-3xl font-bold mb-4 text-center">Movenpick Ambassador Hotel</h1>
+      <div className="flex justify-center items-center mb-4">
+  <FaStar className="text-yellow-500" />
+  <span className="ml-1">5 reviews</span>
+</div>
+
 
         <div className="flex gap-4 mb-4">
-  <img src="/images/Elmina.jpg" alt="Image 1" className="rounded-lg w-1/2" /> {/* Adjusted width */}
+  <img src="/images/movenpick.jpg" alt="Image 1" className="rounded-lg w-1/2" /> {/* Adjusted width */}
   <div className="flex flex-col w-1/2 gap-4"> {/* Container for the other two images */}
-    <img src="/images/safari.avif" alt="Image 2" className="rounded-lg h-1/2" /> {/* Adjusted height */}
-    <img src="/images/polo.jpg" alt="Image 3" className="rounded-lg h-1/2" /> {/* Adjusted height */}
+    <img src="/images/movenpick2.jpg" alt="Image 2" className="rounded-lg h-1/2" /> 
+    <img src="/images/movenpick3.jpg" alt="Image 3" className="rounded-lg h-1/2" /> 
   </div>
 </div>
 
@@ -38,18 +39,9 @@ const Beaches = () => {
             <h2 className="text-xl font-bold mb-2">About</h2>
             <p className="mb-4">Our Tours as always gives you more, our well-traveled Tour Guides will make your adventures in Ghana....You will have a professional driver and a guide who is very knowledgeable and fun to be with. All your requests while on the tour will be answered...</p>
             <div className="mb-4">
-  <ol className="list-decimal list-inside">
+  <ol className="list-decimal list-inside"> 
     <li>
-      Polo Beach House: A serene retreat nestled along the coastline, Polo Beach House offers luxurious accommodations, breathtaking ocean views, and world-class hospitality, making it the perfect destination for relaxation and rejuvenation.
-    </li>
-    <li>
-      Elmina Castle: Steeped in history, Elmina Castle stands as a poignant reminder of Ghana's colonial past. This UNESCO World Heritage Site served as a hub for the transatlantic slave trade and now serves as a powerful memorial and educational center.
-    </li>
-    <li>
-      Safari Valley: Embark on an unforgettable adventure in Safari Valley, where breathtaking landscapes, diverse wildlife, and thrilling safari experiences await. Explore the natural beauty of the African savannah and discover the wonders of the wilderness.
-    </li>
-    <li>
-      Slave Market: A sobering reminder of humanity's darkest chapter, the Slave Market stands as a historic site where countless individuals were bought and sold as commodities. Today, it serves as a memorial to honor the memory of those who suffered under the brutalities of the transatlantic slave trade.
+    Set in an urban oasis within the central district, our contemporary 5 Star hotel is only 7km from the airport where you will receive a warm Ghanaian welcome and complimentary airport shuttle. The Accra Financial Centre, World Trade Centre, International Conference Centre and Government Ministries are all close by.
     </li>
   </ol>
 </div>
@@ -77,7 +69,7 @@ const Beaches = () => {
     </div>
     {/* Tour Details */}
     <div className="border border-gray-200 rounded-lg p-4 mb-4">
-  <p>Elmina Castle, Polo Beach House, Safari Valley, Slave Market Experience</p>
+  <p>Elmina Castle Experience</p>
   <div className="border-b border-gray-300 mb-2">
     <h2 className="text-xl font-bold mb-2">Reserve Now, Pay Later!</h2>
   </div>
@@ -102,6 +94,7 @@ const Beaches = () => {
 
         </div>
 
+
         <div className="col">
           <div className="mb-4">
             <h2 className="text-xl font-bold mb-2 cursor-pointer" onClick={() => setIncludedOpen(!includedOpen)}>What's Included</h2>
@@ -109,10 +102,8 @@ const Beaches = () => {
               <ul className="list-disc list-inside pl-4">
                 <li>Transportation</li>
                 <li>Wifi onboard</li>
-                <li>Admission fees - Elmina Castle</li>
-                <li>Admission fees - Slave Market Castle</li>
-                <li>Dinner - Polo Beach House</li>
-                <li>Accomodation - Safari Valley</li>
+                <li>Admission fees & Accomodation </li>
+               
               </ul>
             )}
           </div>
@@ -126,9 +117,13 @@ const Beaches = () => {
                 <div className="mb-4">
   <h2 className="text-xl font-bold mb-2">Itinerary</h2>
   <div className="mb-4">
-    <b>Stop At: Boti Falls, Boti, Boti Ghana</b>
+    <b>Afternoon: Arrival and Check-In</b>
     <p>
-      Boti falls is a twin waterfall located at Boti in the Eastern Region of Ghana. At Boti Falls we will descend the 250 steps to visit the twin waterfalls. Over here we will relax at the bank of the falls with snacks and cold drinks, we will take a dugout tour on a canoe and anyone seeking more adventure can swim in the falls for a great refreshing moments.
+    Arrive at the Movenpick Ambassador Hotel, located in the heart of Accra.
+    Check-in and settle into your room.
+    Take a tour of the hotel facilities including the pool, fitness center, and spa.
+    Relax and unwind after your journey.
+
     </p>
     <p>
       Duration: 2 hours
@@ -136,50 +131,24 @@ const Beaches = () => {
   </div>
 
   <div className="mb-4">
-    <b>Stop At: Aburi Botanical Gardens, Aburi Ghana</b>
+    <b>Morning: Arrival at Polo Beach House</b>
     <p>
-      We will visit the Aburi Botanical Gardens, a popular place with birds and butterflies. Here we will have a guided tour where we learn the history and the local trees and plant species Tour around the gardens to know about the origin, age and medicinal properties of plants in the gardens. The main entrance welcoming with the palm walk comprising of an avenue of elegant palm The Bush House, The Rock Garden, The Pergola or Lovers lane, The Ficus tree, The retired helicopter School of horticulture.
-    </p>
-    <p>
-      Duration: 2 hours
-    </p>
-  </div>
-
-  <div className="mb-4">
-    <b>Stop At: Umbrella Rock, Asiafo Amanfro, Koforidua Ghana</b>
-    <p>
-      Umbrella rock (45 Minutes Hike)..one can choose to walk in the forest through to the Rock and the 3 headed palm tree or take the easy road with a car..
+    Arrive at Polo Beach House located in Prampram.
+    Take some time to settle in and explore the surroundings.
+      Enjoy the pristine beach and the various water activities available such as swimming, beach volleyball, or simply relaxing by the shore.
+    You can also take a walk along the beach to enjoy the scenic views.
     </p>
     <p>
       Duration: 30 minutes
     </p>
   </div>
 
-  <div className="mb-4">
-    <b>Stop At: Boti, Boti, Eastern Region</b>
-    <p>
-      Three-headed palm tree at Boti falls in the Eastern Region of Ghana. Surprisingly, the heads take turns in bearing fruits each year. You will never find two heads palm anywhere lol.. mystery of the world
-    </p>
-    <p>
-      Duration: 30 minutes
-    </p>
-  </div>
-
-  <div className="mb-4">
-    <b>Stop At: Tetteh Quarshie Avenue, Tetteh Quarshie Ave, Accra, Ghana</b>
-    <p>
-      Ever wondered where chocolate comes from? Well, we’ll take you to the very beginning of chocolate – the cocoa tree. At the Tetteh Quarshie Cocoa Farm, you learn a bit of the history of Cocoa in Ghana.. At the cocoa farm we will learn about the first cocoa farm in Ghana, life span of cocoa and socio-economic benefits to the country. We will have the chance to taste cocoa and get a feel of how natural cocoa is like.
-    </p>
-    <p>
-      Duration: 1 hour
-    </p>
-  </div>
 </div>
 
- </p>     
-              </>
-            )}
-          </div>
+ </p>
+ </>
+ )}
+</div>
 
 
           <hr className="my-4" />
@@ -205,14 +174,6 @@ const Beaches = () => {
                   </div>
                 </div>
 
-                <div className="mb-4 flex items-center">
-                  <FiAirplay className="h-6 w-6 mr-2" />
-                  <div>
-                    <b>Airport pickup offered</b>
-                    <p>During checkout you will be able to select from the list of included airports.</p>
-                    <p>Kotoka Airport, Accra Ghana</p>
-                  </div>
-                </div>
 
                 <p><b>End: This activity ends back at the meeting point.</b></p>
               </div>
@@ -250,15 +211,16 @@ const Beaches = () => {
         </div>
 
 
+
         <div className="text-left mt-20">
             <h2 className="text-3xl font-bold mb-4">Similar Experience</h2>
             <div className="flex gap-8">
               <div className="block transition duration-300 ease-in-out">
                 <div className="placeholder bg-gray-0 p-2 rounded-lg ">
-                  <Link href="/ElminaCastle">
+                  <Link href="BotiFalls">
                     <img src="/images/Aburi.jpg" alt="Placeholder 1" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
-                  <h3 className="text-xl font-semibold mb-2">Elmina Castle Experience</h3>
+                  <h3 className="text-xl font-semibold mb-2">Boti Falls & Aburi Gardens Experience</h3>
                   <p className="text-green-500 mb-2">Rating: 4.5</p>
                   <p className="text-green-500">Price Range: GHS 50 - 100</p>
                 </div>

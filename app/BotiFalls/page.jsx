@@ -18,7 +18,7 @@ const Beaches = () => {
     <>
       <Header />
       <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-4 text-center">Safari Valley Resort</h1>
+      <h1 className="text-3xl font-bold mb-4 text-center">Boti Falls</h1>
       <div className="flex justify-center items-center mb-4">
   <FaStar className="text-yellow-500" />
   <span className="ml-1">5 reviews</span>
@@ -26,10 +26,10 @@ const Beaches = () => {
 
 
         <div className="flex gap-4 mb-4">
-  <img src="/images/safari.jpg" alt="Image 1" className="rounded-lg w-1/2" /> {/* Adjusted width */}
+  <img src="/images/boti.jpg" alt="Image 1" className="rounded-lg w-1/2" /> {/* Adjusted width */}
   <div className="flex flex-col w-1/2 gap-4"> {/* Container for the other two images */}
-    <img src="/images/safari2.jpg" alt="Image 2" className="rounded-lg h-1/2" /> 
-    <img src="/images/safari3.jpg" alt="Image 3" className="rounded-lg h-1/2" /> 
+    <img src="/images/boti2.jpg" alt="Image 2" className="rounded-lg h-1/2" /> 
+    <img src="/images/boti3.jpg" alt="Image 3" className="rounded-lg h-1/2" /> 
   </div>
 </div>
 
@@ -37,11 +37,25 @@ const Beaches = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-24 mb-8">
           <div>
             <h2 className="text-xl font-bold mb-2">About</h2>
-            <p className="mb-4">Our Tours as always gives you more, our well-traveled Tour Guides will make your adventures in Ghana....You will have a professional driver and a guide who is very knowledgeable and fun to be with. All your requests while on the tour will be answered...</p>
+            <p className="mb-4">Boti Falls, located in the Eastern Region of Ghana, is a picturesque waterfall nestled in lush greenery and surrounded by scenic landscapes. Here are some key points about Boti Falls:</p>
             <div className="mb-4">
+                
   <ol className="list-decimal list-inside"> 
+  
     <li>
-    Embark on an unforgettable adventure in Safari Valley, where breathtaking landscapes, diverse wildlife, and thrilling safari experiences await. Explore the natural beauty of the African savannah and discover the wonders of the wilderness.
+    Natural Beauty: Boti Falls is renowned for its stunning natural beauty, characterized by cascading waterfalls surrounded by dense tropical forests.
+    </li>
+    <li>
+    Twin Waterfalls: Boti Falls comprises two main waterfalls, the upper falls and the lower falls, which descend from different heights into a serene pool below.
+    </li>
+    <li>
+    Cultural Significance: The falls hold cultural significance for the local people, particularly the nearby Boti community. It is often used for rituals and traditional ceremonies.
+    </li>
+    <li>
+    Adventure and Recreation: Visitors can engage in various activities at Boti Falls, including hiking, swimming in the pool beneath the falls, and exploring the surrounding forest trails.
+    </li>
+    <li>
+    Tourist Facilities: There are basic tourist facilities available near Boti Falls, including picnic areas, restrooms, and stalls selling local crafts and refreshments.
     </li>
   </ol>
 </div>
@@ -90,11 +104,7 @@ const Beaches = () => {
     <p className="text-xs mt-2">Not sure? You can cancel this reservation up to 24 hours in advance for a full refund.</p>
   </div>
 </div>
-
-
         </div>
-
-
         <div className="col">
           <div className="mb-4">
             <h2 className="text-xl font-bold mb-2 cursor-pointer" onClick={() => setIncludedOpen(!includedOpen)}>What's Included</h2>
@@ -102,8 +112,7 @@ const Beaches = () => {
               <ul className="list-disc list-inside pl-4">
                 <li>Transportation</li>
                 <li>Wifi onboard</li>
-                <li>Admission fees & Accomodation
-                </li>
+                <li>Admission fees </li>
               </ul>
             )}
           </div>
@@ -117,73 +126,36 @@ const Beaches = () => {
                 <div className="mb-4">
   <h2 className="text-xl font-bold mb-2">Itinerary</h2>
   <div className="mb-4">
-    <b>Day 1: Departure from Accra and Arrival at Safari Valley Resort</b>
+   
     <p>
-    8:00 AM: Gather at Accra Mall
-        Assemble at Accra Mall, located on Spintex Road in Accra.
-        Ensure all members of the group are present and ready for departure.
-    8:30 AM: Departure to Safari Valley Resort
-        Depart from Accra Mall by car or bus.
-        Head towards the Aburi area via the N4 Highway and continue towards the Eastern Region.
-        Follow GPS directions to Safari Valley Resort. The drive should take approximately 2 to 3 hours, depending on traffic.
-Mid-Morning: Arrival at Safari Valley Resort
-    11:00 AM: Check-In at Safari Valley Resort
-        Arrive at Safari Valley Resort located in the Eastern Region.
-        Check-in and get settled in your accommodation.
-Afternoon: Explore and Relax
-    12:00 PM: Lunch at the Resort
-        Enjoy lunch at the resort's restaurant, featuring a variety of local and international dishes.
-    1:00 PM: Resort Activities
-        Explore the resort and participate in available activities such as guided nature walks, bird watching, or horseback riding.
-        Visit the animal sanctuary and interact with the animals.
-Evening: Relax and Dine
-    6:00 PM: Dinner at the Resort
-        Savor a delicious dinner at the resort's restaurant.
-        Enjoy an evening of relaxation, perhaps around a campfire or with live entertainment (if available).
-Night: Overnight Stay
-    8:00 PM: Leisure Time
-        Spend the evening at your leisure. You can enjoy a night walk or relax in your room.
+    Morning:
 
-    </p>
-    
-  </div>
+    Depart Accra early (around 6:00 AM).
+    Travel to Boti Falls (2.5 - 3 hours).
 
-  <div className="mb-4">
-    <b>Day 2: Activities and Return to Accra</b>
-    <p>
-    Morning: Breakfast and Activities
+Mid-Morning:
+3. Explore the falls and surrounding trails.
 
-7:00 AM: Breakfast at the Resort
-    Start your day with a hearty breakfast at the resort.
+Late Morning:
+4. Hike to Upper Falls for scenic views.
 
-8:00 AM: Morning Activities
-    Engage in more resort activities such as fishing, biking, or swimming.
-    Take a guided tour of the surrounding area to learn more about the local flora and fauna.
+Noon:
+5. Enjoy a picnic lunch by the falls.
 
-Afternoon: Relax and Lunch
+Afternoon:
+6. Visit Lower Falls for another perspective.
 
-12:00 PM: Lunch at the Resort
-    Enjoy a relaxing lunch at the resort.
-    Spend some time by the pool or take a nap in the serene environment.
+Late Afternoon:
+7. Relax and explore the area further.
 
-Late Afternoon: Departure from Safari Valley Resort
-
-3:00 PM: Check-Out and Departure
-    Check out from the resort.
-    Depart from Safari Valley Resort and head back to Accra Mall.
-
-Evening: Arrival at Accra Mall
-
-6:00 PM: Arrival at Accra Mall
-    Arrive back at Accra Mall.
-    End of the trip. You can spend some time at the mall if you wish or head back home.
-    </p>
-    <p>
-      Duration: 2 hours
+Evening:
+8. Depart Boti Falls by 4:00 PM for return to Accra.
     </p>
   </div>
 
- 
+
+
+
 
 </div>
 
@@ -216,14 +188,6 @@ Evening: Arrival at Accra Mall
                   </div>
                 </div>
 
-                <div className="mb-4 flex items-center">
-                  <FiAirplay className="h-6 w-6 mr-2" />
-                  <div>
-                    <b>Airport pickup offered</b>
-                    <p>During checkout you will be able to select from the list of included airports.</p>
-                    <p>Kotoka Airport, Accra Ghana</p>
-                  </div>
-                </div>
 
                 <p><b>End: This activity ends back at the meeting point.</b></p>
               </div>
@@ -260,20 +224,13 @@ Evening: Arrival at Accra Mall
 
         </div>
 
-
-
-
-
-
-
-
-        {/* Add more sections as needed */}
+      
         <div className="text-left mt-20">
             <h2 className="text-3xl font-bold mb-4">Similar Experience</h2>
             <div className="flex gap-8">
               <div className="block transition duration-300 ease-in-out">
                 <div className="placeholder bg-gray-0 p-2 rounded-lg ">
-                  <Link href="boti">
+                  <Link href="BotiFalls">
                     <img src="/images/Aburi.jpg" alt="Placeholder 1" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
                   <h3 className="text-xl font-semibold mb-2">Boti Falls & Aburi Gardens Experience</h3>
@@ -284,7 +241,7 @@ Evening: Arrival at Accra Mall
 
               <div className="block transition duration-300 ease-in-out">
                 <div className="placeholder bg-gray-0 p-2 rounded-lg ">
-                  <Link href="/privatetour">
+                  <Link href="/SafariValley">
                     <img src="/images/shai.webp" alt="Placeholder 2" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
                   <h3 className="text-xl font-semibold mb-2">Private tour of Shai Hills Reserves, <p>Volta river & bead factory</p></h3>
@@ -295,7 +252,7 @@ Evening: Arrival at Accra Mall
 
               <div className="block transition duration-300 ease-in-out">
                 <div className="placeholder bg-gray-0 p-2 rounded-lg ">
-                  <Link href="nature">
+                  <Link href="BotiFalls">
                     <img src="/images/53.jpg" alt="Placeholder 3" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
                   <h3 className="text-xl font-semibold mb-2">Nature Thrills</h3>
@@ -306,7 +263,7 @@ Evening: Arrival at Accra Mall
 
               <div className="block transition duration-300 ease-in-out">
                 <div className="placeholder bg-gray-0 p-2 rounded-lg ">
-                  <Link href="/KNMP">
+                  <Link href="/KwameNkrumahMausoleum">
                     <img src="/images/nature.jpeg" alt="Placeholder 4" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
                   <h3 className="text-xl font-semibold mb-2">Legon Botanical Garden and <p>Kwame Nkrumah Museum experience</p> </h3>

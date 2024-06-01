@@ -239,20 +239,12 @@ const Beaches = () => {
 
         </div>
 
-
-
-
-
-
-
-
-        {/* Add more sections as needed */}
         <div className="text-left mt-20">
             <h2 className="text-3xl font-bold mb-4">Similar Experience</h2>
             <div className="flex gap-8">
               <div className="block transition duration-300 ease-in-out">
                 <div className="placeholder bg-gray-0 p-2 rounded-lg ">
-                  <Link href="boti">
+                  <Link href="BotiFalls">
                     <img src="/images/Aburi.jpg" alt="Placeholder 1" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
                   <h3 className="text-xl font-semibold mb-2">Boti Falls & Aburi Gardens Experience</h3>
@@ -263,7 +255,7 @@ const Beaches = () => {
 
               <div className="block transition duration-300 ease-in-out">
                 <div className="placeholder bg-gray-0 p-2 rounded-lg ">
-                  <Link href="/privatetour">
+                  <Link href="/SafariValley">
                     <img src="/images/shai.webp" alt="Placeholder 2" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
                   <h3 className="text-xl font-semibold mb-2">Private tour of Shai Hills Reserves, <p>Volta river & bead factory</p></h3>
@@ -274,7 +266,7 @@ const Beaches = () => {
 
               <div className="block transition duration-300 ease-in-out">
                 <div className="placeholder bg-gray-0 p-2 rounded-lg ">
-                  <Link href="nature">
+                  <Link href="BotiFalls">
                     <img src="/images/53.jpg" alt="Placeholder 3" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
                   <h3 className="text-xl font-semibold mb-2">Nature Thrills</h3>
@@ -285,7 +277,7 @@ const Beaches = () => {
 
               <div className="block transition duration-300 ease-in-out">
                 <div className="placeholder bg-gray-0 p-2 rounded-lg ">
-                  <Link href="/KNMP">
+                  <Link href="/KwameNkrumahMausoleum">
                     <img src="/images/nature.jpeg" alt="Placeholder 4" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
                   <h3 className="text-xl font-semibold mb-2">Legon Botanical Garden and <p>Kwame Nkrumah Museum experience</p> </h3>

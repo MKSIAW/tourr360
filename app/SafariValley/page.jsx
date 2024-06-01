@@ -18,7 +18,7 @@ const Beaches = () => {
     <>
       <Header />
       <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-4 text-center">Salaga Slave Maket</h1>
+      <h1 className="text-3xl font-bold mb-4 text-center">Safari Valley Resort</h1>
       <div className="flex justify-center items-center mb-4">
   <FaStar className="text-yellow-500" />
   <span className="ml-1">5 reviews</span>
@@ -26,10 +26,10 @@ const Beaches = () => {
 
 
         <div className="flex gap-4 mb-4">
-  <img src="/images/slave.jpg" alt="Image 1" className="rounded-lg w-1/2" /> {/* Adjusted width */}
+  <img src="/images/safari.jpg" alt="Image 1" className="rounded-lg w-1/2" /> {/* Adjusted width */}
   <div className="flex flex-col w-1/2 gap-4"> {/* Container for the other two images */}
-    <img src="/images/slave2.jpeg" alt="Image 2" className="rounded-lg h-1/2" /> 
-    <img src="/images/slave3.jpg" alt="Image 3" className="rounded-lg h-1/2" /> 
+    <img src="/images/safari2.jpg" alt="Image 2" className="rounded-lg h-1/2" /> 
+    <img src="/images/safari3.jpg" alt="Image 3" className="rounded-lg h-1/2" /> 
   </div>
 </div>
 
@@ -41,7 +41,7 @@ const Beaches = () => {
             <div className="mb-4">
   <ol className="list-decimal list-inside"> 
     <li>
-      Slave Market: Once a major hub in the trans-Saharan trade, the Salaga Slave Market in northern Ghana played a significant role in the slave trade during the 18th and 19th centuries. Today, it serves as an important historical site, reminding visitors of the brutal realities of slavery and the resilience of those who suffered.
+    Embark on an unforgettable adventure in Safari Valley, where breathtaking landscapes, diverse wildlife, and thrilling safari experiences await. Explore the natural beauty of the African savannah and discover the wonders of the wilderness.
     </li>
   </ol>
 </div>
@@ -102,10 +102,8 @@ const Beaches = () => {
               <ul className="list-disc list-inside pl-4">
                 <li>Transportation</li>
                 <li>Wifi onboard</li>
-                <li>Admission fees - Elmina Castle</li>
-                <li>Admission fees - Slave Market Castle</li>
-                <li>Dinner - Polo Beach House</li>
-                <li>Accomodation - Safari Valley</li>
+                <li>Admission fees & Accomodation
+                </li>
               </ul>
             )}
           </div>
@@ -119,65 +117,74 @@ const Beaches = () => {
                 <div className="mb-4">
   <h2 className="text-xl font-bold mb-2">Itinerary</h2>
   <div className="mb-4">
-    <b>Day 1: Departure from Accra to Tamale</b>
+    <b>Day 1: Departure from Accra and Arrival at Safari Valley Resort</b>
     <p>
-    Depart from Accra by flight to Tamale (1-hour flight).
-    Flights are available from Kotoka International Airport (ACC) to Tamale Airport (TML).
-    Arrive in Tamale and transfer to your hotel.
-    Check-in and have lunch at the hotel or a nearby restaurant.
-    Explore Tamale briefly. Visit the Tamale Cultural Centre or the local markets.
-    Dinner at a local restaurant or your hotel.
+    8:00 AM: Gather at Accra Mall
+        Assemble at Accra Mall, located on Spintex Road in Accra.
+        Ensure all members of the group are present and ready for departure.
+    8:30 AM: Departure to Safari Valley Resort
+        Depart from Accra Mall by car or bus.
+        Head towards the Aburi area via the N4 Highway and continue towards the Eastern Region.
+        Follow GPS directions to Safari Valley Resort. The drive should take approximately 2 to 3 hours, depending on traffic.
+Mid-Morning: Arrival at Safari Valley Resort
+    11:00 AM: Check-In at Safari Valley Resort
+        Arrive at Safari Valley Resort located in the Eastern Region.
+        Check-in and get settled in your accommodation.
+Afternoon: Explore and Relax
+    12:00 PM: Lunch at the Resort
+        Enjoy lunch at the resort's restaurant, featuring a variety of local and international dishes.
+    1:00 PM: Resort Activities
+        Explore the resort and participate in available activities such as guided nature walks, bird watching, or horseback riding.
+        Visit the animal sanctuary and interact with the animals.
+Evening: Relax and Dine
+    6:00 PM: Dinner at the Resort
+        Savor a delicious dinner at the resort's restaurant.
+        Enjoy an evening of relaxation, perhaps around a campfire or with live entertainment (if available).
+Night: Overnight Stay
+    8:00 PM: Leisure Time
+        Spend the evening at your leisure. You can enjoy a night walk or relax in your room.
+
     </p>
-    <p> 
+    
+  </div>
+
+  <div className="mb-4">
+    <b>Day 2: Activities and Return to Accra</b>
+    <p>
+    Morning: Breakfast and Activities
+
+7:00 AM: Breakfast at the Resort
+    Start your day with a hearty breakfast at the resort.
+
+8:00 AM: Morning Activities
+    Engage in more resort activities such as fishing, biking, or swimming.
+    Take a guided tour of the surrounding area to learn more about the local flora and fauna.
+
+Afternoon: Relax and Lunch
+
+12:00 PM: Lunch at the Resort
+    Enjoy a relaxing lunch at the resort.
+    Spend some time by the pool or take a nap in the serene environment.
+
+Late Afternoon: Departure from Safari Valley Resort
+
+3:00 PM: Check-Out and Departure
+    Check out from the resort.
+    Depart from Safari Valley Resort and head back to Accra Mall.
+
+Evening: Arrival at Accra Mall
+
+6:00 PM: Arrival at Accra Mall
+    Arrive back at Accra Mall.
+    End of the trip. You can spend some time at the mall if you wish or head back home.
+    </p>
+    <p>
       Duration: 2 hours
     </p>
   </div>
 
-  <div className="mb-4">
-    <b>Day 2: Journey to Salaga</b>
-    <p>
-    Breakfast at the hotel.
-    Depart from Tamale to Salaga by car (approximately 3-4 hours drive).
-    Arrive in Salaga and check into a local guesthouse or hotel.
-    Have lunch at a local eatery.
-    Visit the Salaga Slave Market site. Explore the historical market, slave wells, and the remnants of the slave trade.
-    Learn about the history and significance of Salaga in the trans-Saharan trade.
+ 
 
-    </p>
-    <p>
-      Duration: 2 hours
-    </p>
-  </div>
-
-  <div className="mb-4">
-    <b>Day 3: Explore Salaga and Return to Tamale</b>
-    <p>
-    Breakfast at the guesthouse/hotel.
-Continue exploring Salaga. Visit other historical landmarks and engage with the local community.
-Depart from Salaga back to Tamale.
-Lunch en route or upon arrival in Tamale.
-Arrive in Tamale and check back into your hotel.
-Relax and have dinner at the hotel or a nearby restaurant.
-    </p>
-    <p>
-      Duration: 30 minutes
-    </p>
-  </div>
-
-  <div className="mb-4">
-    <b>Day 4: Return to Accra</b>
-    <p>
-    Breakfast at the hotel.
-Transfer to Tamale Airport for your flight back to Accra.
-Arrive in Accra.
-End of the itinerary.
-
-
-    </p>
-    <p>
-      Duration: 2 hours
-    </p>
-  </div>
 </div>
 
  </p>     
@@ -253,20 +260,12 @@ End of the itinerary.
 
         </div>
 
-
-
-
-
-
-
-
-        {/* Add more sections as needed */}
         <div className="text-left mt-20">
             <h2 className="text-3xl font-bold mb-4">Similar Experience</h2>
             <div className="flex gap-8">
               <div className="block transition duration-300 ease-in-out">
                 <div className="placeholder bg-gray-0 p-2 rounded-lg ">
-                  <Link href="boti">
+                  <Link href="BotiFalls">
                     <img src="/images/Aburi.jpg" alt="Placeholder 1" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
                   <h3 className="text-xl font-semibold mb-2">Boti Falls & Aburi Gardens Experience</h3>
@@ -277,7 +276,7 @@ End of the itinerary.
 
               <div className="block transition duration-300 ease-in-out">
                 <div className="placeholder bg-gray-0 p-2 rounded-lg ">
-                  <Link href="/privatetour">
+                  <Link href="/SafariValley">
                     <img src="/images/shai.webp" alt="Placeholder 2" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
                   <h3 className="text-xl font-semibold mb-2">Private tour of Shai Hills Reserves, <p>Volta river & bead factory</p></h3>
@@ -288,7 +287,7 @@ End of the itinerary.
 
               <div className="block transition duration-300 ease-in-out">
                 <div className="placeholder bg-gray-0 p-2 rounded-lg ">
-                  <Link href="nature">
+                  <Link href="BotiFalls">
                     <img src="/images/53.jpg" alt="Placeholder 3" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
                   <h3 className="text-xl font-semibold mb-2">Nature Thrills</h3>
@@ -299,7 +298,7 @@ End of the itinerary.
 
               <div className="block transition duration-300 ease-in-out">
                 <div className="placeholder bg-gray-0 p-2 rounded-lg ">
-                  <Link href="/KNMP">
+                  <Link href="/KwameNkrumahMausoleum">
                     <img src="/images/nature.jpeg" alt="Placeholder 4" className="w-72 h-72 rounded-lg mb-4" />
                   </Link>
                   <h3 className="text-xl font-semibold mb-2">Legon Botanical Garden and <p>Kwame Nkrumah Museum experience</p> </h3>
