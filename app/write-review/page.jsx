@@ -166,7 +166,7 @@ const ReviewPage = () => {
             <div className="mb-6">
               <h3 className="text-lg font-semibold mb-2">{selectedSite ? selectedSite.name : 'Nature Thrills'}</h3>
               <p className="text-gray-600 mb-4">{selectedSite ? `Location: ${selectedSite.location}` : 'By ProTour Africa'}</p>
-              <button className="text-blue-500 underline">Not the right one? Change activity</button>
+             
               {selectedSite && (
                 <img src={selectedSite.image} alt={selectedSite.name} className="w-full h-40 rounded-lg mb-4" />
               )}

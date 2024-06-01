@@ -142,7 +142,7 @@ const ExplorePage = () => {
 
                 <div className="flex flex-col justify-between items-center bg-white rounded-lg p-2 ">
                 <div className="relative">
-                <Link href="/beaches">
+                <Link href="/hiking">
                 <img src="/images/hiking.avif" alt="Beach Placeholder" className="w-full h-56 object-cover rounded-lg mb-4" />
                 </Link>
                 <button className="absolute top-0 right-0 text-red-500 hover:text-red-700 z-10">
@@ -161,7 +161,7 @@ const ExplorePage = () => {
 
                 <div className="flex flex-col justify-between items-center bg-white rounded-lg p-2 ">
                 <div className="relative">
-                <Link href="/beaches">
+                <Link href="/summer-city-break">
                 <img src="/images/city.webp" alt="Beach Placeholder" className="w-full h-56 object-cover rounded-lg mb-4" />
                 </Link>
                 <button className="absolute top-0 right-0 text-red-500 hover:text-red-700 z-10">
