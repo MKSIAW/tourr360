@@ -164,8 +164,8 @@ const ReviewPage = () => {
           <div className="bg-gray-100 p-6 rounded-lg">
             <h2 className="text-xl font-semibold mb-4">Tell us, how was your visit?</h2>
             <div className="mb-6">
-              <h3 className="text-lg font-semibold mb-2">{selectedSite ? selectedSite.name : 'Nature Thrills'}</h3>
-              <p className="text-gray-600 mb-4">{selectedSite ? `Location: ${selectedSite.location}` : 'By ProTour Africa'}</p>
+              <h3 className="text-lg font-semibold mb-2">{selectedSite ? selectedSite.name : 'Select place'}</h3>
+              <p className="text-gray-600 mb-4">{selectedSite ? `Location: ${selectedSite.location}` : 'By Tour360'}</p>
              
               {selectedSite && (
                 <img src={selectedSite.image} alt={selectedSite.name} className="w-full h-40 rounded-lg mb-4" />
