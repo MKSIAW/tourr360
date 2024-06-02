@@ -184,7 +184,7 @@ const Welcome = ({ user }) => {
                 <img src="/images/plan.jpg" alt="Placeholder 5" className="w-60 h-40 rounded-lg mr-8" />
                 <div>
                   <h2 className="text-3xl font-bold mb-4 font-arial">Keep on Planning</h2>
-                  <p className="text-lg mb-4 font-arial">What to do, where to eat & more trip inspo</p>
+                  <p className="text-lg mb-4 font-arial">What to do, where to eat & more trip inspiration</p>
                 </div>
                 <div className="flex-grow"></div>
                 <Link href="/articles">

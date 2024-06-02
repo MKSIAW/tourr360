@@ -78,16 +78,21 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchTouristSites = async () => {
       try {
+        const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJtaWNoZWxsZSIsImlhdCI6MTcxNDQ4ODQ1NywiZXhwIjoxODcyMTY4NDU3fQ.cg9eGdXaeKaKQiBtLscqfl7wUTq_BXUite33psQPjxk";
+        const headers = {
+          Authorization: `Bearer ${token}`,
+        };
         const response = await axios.get(
-          'http://localhost/wordpress/wp-json/wp/v2/tour-site?acf_format=standard&_fields=id,title,acf&per_page=20'
+          'http://localhost/wordpress/wp-json/wp/v2/tour-site?acf_format=standard&_fields=id,title,acf&per_page=20',
+          { headers }
         );
         const sites = response.data.map((site) => ({
           id: site.id,
           name: site.title.rendered,
           image: site.acf.image,
           location: site.acf.location,
-          category: site.acf.category && site.acf.category.name, // Ensure category is properly extracted
-          price: site.acf.price, // Ensure price is properly extracted if it is a number or string
+          category: site.acf.category && site.acf.category.name,
+          price: site.acf.price,
         }));
         setTouristSites(sites);
         setFilteredSites(sites);
