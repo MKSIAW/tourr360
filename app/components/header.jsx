@@ -60,7 +60,7 @@ const Header = () => {
             <div className="absolute right-0 mt-2 w-64 bg-white border rounded-lg shadow-lg z-10">
               {/* More options */}
             
-              <NavLink href="#">Cruises</NavLink>
+              <NavLink href="/travel-tips">Travel Tips</NavLink>
               
             </div>
           )}

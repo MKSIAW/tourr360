@@ -100,8 +100,8 @@ const Home = () => {
           )}
         </div>
 
-
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+{/* 
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"> 
           <img
             src="./images/pin-red.png"
             alt="Marker"
@@ -110,7 +110,7 @@ const Home = () => {
             height={50}
             onClick={() => handleMarkerClick('./360/GGUO5117.JPG', 'Moving to the fountain')}
           />
-        </div>
+        </div>  */}
 
 
         {lightboxOpen && (

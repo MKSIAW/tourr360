@@ -46,9 +46,6 @@ const FoodAndDrinksPage = () => {
          
         </section>
 
-     
-
-        
       </div>
       <Footer />
     </>
