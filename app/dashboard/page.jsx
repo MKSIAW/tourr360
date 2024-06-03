@@ -9,7 +9,7 @@ import Footer from '../components/footer';
 
 // Filter Components
 const LocationFilter = ({ onFilterChange }) => {
-  const locations = ['Accra', 'Cape Coast', 'Kumasi', 'Tamale']; // Example locations
+  const locations = ['Accra', 'Cape Coast', 'Kumasi', 'Tamale', 'Nzema', 'Techiman']; 
 
   return (
     <select
@@ -27,7 +27,7 @@ const LocationFilter = ({ onFilterChange }) => {
 };
 
 const CategoryFilter = ({ onFilterChange }) => {
-  const categories = ['Historical', 'Beach', 'Museum', 'Park', 'school', 'hotel']; // Example categories
+  const categories = ['Historical', 'Beach', 'Museum', 'Park', 'School', 'Hotel']; 
 
   return (
     <select
