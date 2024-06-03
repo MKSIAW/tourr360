@@ -56,19 +56,19 @@ const FoodAndDrinksPage = () => {
   <p className="text-xl font-bold mb-4">Related Stories</p>
   <div className="flex justify-center space-x-4">
     <div className="placeholder bg-gray-0 p-2 rounded-lg">
-      <Link href="/best-coffee-shops-in-accra">
+      <Link href="/best-coffee">
         <img src="/images/coffee.avif" alt="Coffee Shop Placeholder" className="w-72 h-72 rounded-lg mb-4" />
       </Link>
       <span>Best Coffee Shops in Accra</span>
     </div>
     <div className="placeholder bg-gray-0 p-2 rounded-lg">
-      <Link href="/must-try-street-food-in-ghana">
+      <Link href="/street-food">
         <img src="/images/egg.webp" alt="Street Food Placeholder" className="w-72 h-72 rounded-lg mb-4" />
       </Link>
       <span>Must-Try Street Food in Ghana</span>
     </div>
     <div className="placeholder bg-gray-0 p-2 rounded-lg">
-      <Link href="/exploring-ghanaian-cuisine">
+      <Link href="/culinary">
         <img src="/images/cuisine.avif" alt="Cuisine Placeholder" className="w-72 h-72 rounded-lg mb-4" />
       </Link>
       <span>Exploring Ghanaian Cuisine: A Culinary Adventure</span>

@@ -43,7 +43,7 @@ const HotelListPage = () => {
         <ol className="list-decimal pl-0">
           {hotels.map((hotel, index) => (
             <li key={index} className="mb-6">
-              <Link href={`/hotel/${hotel.id}`} passHref>
+              <Link href={`/blog`} passHref>
                 <id>
                   <div className="border border-gray-200 p-4 rounded-md flex">
                     <div className="w-1/4 h-auto mr-4">

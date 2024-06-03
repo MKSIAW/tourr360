@@ -111,72 +111,108 @@ const Welcome = ({ user }) => {
             </div>
           </div>
 
-          <div className="placeholder-container text-center mt-20">
-            <div className="placeholder bg-gray-0 p-4 w-350 mx-auto relative rounded-xl">
-              <img src="/images/choice.avif" alt="Hotels" className="w-full rounded-lg mb-4" />
-              <div className="absolute bottom-10 left-10 w-50 text-left">
-                <h2 className="text-3xl font-bold text-white font-arial mb-1">Ghana's Best Hotels for 2024</h2>
-                <p className="text-1xl text-white font-arial mb-6">
-                  See our Tourist Choice Awards Best of the Best Winners
-                </p>
-                <Link href="/hotels">
-                  <div className="bg-white hover:bg-gray-100 text-black font-bold py-2 px-3 rounded-3xl font-arial text-xl" style={{ maxWidth: '200px' }}>
-                    Explore the List
-                  </div>
+ 
+
+          <div className="placeholder-container text-center ">
+            <div className="placeholder bg-gray-0 p-4 w-350 mx-auto relative rounded-xl"><div className="explore-section bg-gray py-8">
+          <div className="container mx-auto flex flex-col sm:flex-row items-center">
+            
+            <div className="w-full sm:w-2/3 mb-4 sm:mb-0">
+              <Link href="/foodanddrink">
+              <img src="/images/food.jpg" alt="Food Placeholder 1" className="w-full h-[40rem] rounded-lg mb-0" />
+              </Link>
+            </div>
+            <div className="w-full sm:w-1/3 flex flex-col justify-between sm:ml-4">
+              <div className="w-full mb-4">
+              <Link href="/foodanddrink">
+                <img src="/images/drink.avif" alt="Food Placeholder 2" className="w-full rounded-lg mb-4" />
+                </Link>
+              </div>
+              <div className="w-full">
+              <Link href="/foodanddrink">
+                <img src="/images/restaurant.webp" alt="Food Placeholder 3" className="w-full rounded-lg" />
                 </Link>
               </div>
             </div>
           </div>
-
-          <div className="text-left mt-20">
-            <h2 className="text-3xl font-bold mb-4 ml-4">Ways to Tour Accra</h2>
-            <p className="text-lg mb-8 ml-4">Book these experiences for a close-up look at Accra</p>
-            <div className="flex gap-8">
-              <div className="block transition duration-300 ease-in-out">
-                <div className="placeholder bg-gray-0 p-2 rounded-lg ">
-                  <Link href="/experience">
-                    <img src="/images/elmina.jpg" alt="Placeholder 1" className="w-72 h-72 rounded-lg mb-4" />
-                  </Link>
-                  <h3 className="text-xl font-semibold mb-2">Customized Experience</h3>
-                  <p className="text-green-500 mb-2">Rating: 4.5</p>
-                  <p className="text-green-500">Price Range: GHS 50 - 100</p>
-                </div>
-              </div>
-
-              <div className="block transition duration-300 ease-in-out">
-                <div className="placeholder bg-gray-0 p-2 rounded-lg ">
-                  <Link href="/PoloBeachHouse">
-                    <img src="/images/polo.jpg" alt="Placeholder 2" className="w-72 h-72 rounded-lg mb-4" />
-                  </Link>
-                  <h3 className="text-xl font-semibold mb-2">Polo Beach House</h3>
-                  <p className="text-green-500 mb-2">Rating: 4.2</p>
-                  <p className="text-green-500">Price Range: GHS 30 - 80</p>
-                </div>
-              </div>
-
-              <div className="block transition duration-300 ease-in-out">
-                <div className="placeholder bg-gray-0 p-2 rounded-lg ">
-                  <Link href="SafariValley">
-                    <img src="/images/safari.avif" alt="Placeholder 3" className="w-72 h-72 rounded-lg mb-4" />
-                  </Link>
-                  <h3 className="text-xl font-semibold mb-2">Safari Valley</h3>
-                  <p className="text-green-500 mb-2">Rating: 4.7</p>
-                  <p className="text-green-500">Price Range: GHS 100 - 300</p>
-                </div>
-              </div>
-
-              <div className="block transition duration-300 ease-in-out">
-                <div className="placeholder bg-gray-0 p-2 rounded-lg ">
-                  <Link href="/SlaveMarket">
-                    <img src="/images/slave.jpg" alt="Placeholder 4" className="w-72 h-72 rounded-lg mb-4" />
-                  </Link>
-                  <h3 className="text-xl font-semibold mb-2">Slave Market</h3>
-                  <p className="text-green-500 mb-2">Rating: 4.9</p>
-                  <p className="text-green-500">Price Range: GHS 80 - 200</p>
-                </div>
-              </div>
+          <div className="text-center mt-4">
+           
+          </div>
+        </div>
+              
             </div>
           </div>
+
+          <div className="explore-section py-8">
+          <div className="container mx-auto">
+            <div className="text-center mt-4 font-arial">
+            <h2 className="text-4xl font-semibold mb-4">Ways to Tour Accra</h2>
+            <p className="text-3xl-gray-600 mb-8 ">Book these experiences for a close-up look at Accra</p>
+          </div>
+
+          <div class="flex items-center justify-center -mx-8">
+  <div class="w-full sm:w-1/2 mb-2 sm:mb-0 px-2">
+    <Link href="/experience">
+    <img src="/images/slave3.jpg" alt="Visit Placeholder 1" class="w-full rounded-lg h-96" />
+    </Link>
+  </div>
+
+  <div class="w-full sm:w-1/2 flex flex-col justify-between px-2">
+    <div class="w-full mb-2">
+    <Link href="/PoloBeachHouse">
+      <img src="/images/polo.jpg" alt="Visit Placeholder 2" class="w-full rounded-lg h-72" />
+      </Link>
+    </div>
+    <div class="w-full">
+    <Link href="/ElminaCastle">
+      <img src="/images/elmina.jpg" alt="Visit Placeholder 3" class="w-full rounded-lg h-72" />
+      </Link>
+    </div>
+  </div>
+
+  <div class="w-full sm:w-1/2 mb-2 sm:mb-0 px-2">
+  <Link href="/SafariValley">
+    <img src="/images/safari.avif" alt="Visit Placeholder 4" class="w-full rounded-lg h-96" />
+    </Link>
+  </div>
+
+  <div class="w-full sm:w-1/2 flex flex-col justify-between px-2">
+    <div class="w-full mb-2">
+    <Link href="/KwameNkrumahMausoleum">
+      <img src="/images/kwams.jpg" alt="Visit Placeholder 5" class="w-full rounded-lg h-72" />
+      </Link>
+    </div>
+    <div class="w-full">
+    <Link href="/BotiFalls">
+      <img src="/images/lake.jpg" alt="Visit Placeholder 6" class="w-full rounded-lg h-72" />
+      </Link>
+    </div>
+  </div>
+
+  <div class="w-full sm:w-1/2 mb-2 sm:mb-0 px-2">
+  <Link href="/movenpick">
+    <img src="/images/kempinski.jpg" alt="Visit Placeholder 7" class="w-full rounded-lg h-96" />
+    </Link>
+  </div>
+
+  <div class="w-full sm:w-1/2 flex flex-col justify-between px-2">
+    <div class="boti">
+    <Link href="/BotiFalls">
+      <img src="/images/kintampo.jpg" alt="Visit Placeholder 8" class="w-full rounded-lg h-72" />
+      </Link>
+    </div>
+    <div class="w-full">
+    <Link href="/movenpick">
+      <img src="/images/choice.jpg" alt="Visit Placeholder 9" class="w-full rounded-lg h-72" />
+      </Link>
+    </div>
+  </div>
+</div>
+   <div className="text-center mt-4">
+             
+            </div>
+          </div>
+        </div>
 
           <div className="text-center mt-20">
             <div className="max-w-6xl mx-auto border rounded-lg overflow-hidden">

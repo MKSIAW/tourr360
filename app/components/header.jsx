@@ -33,6 +33,7 @@ const Header = () => {
       </div>
 
       <div className="flex items-center space-x-4">
+        
         <NavLink href="/dashboard">Virtual Tour</NavLink>
         
         {/* Trips dropdown */}

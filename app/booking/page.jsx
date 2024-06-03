@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState } from 'react';
 import Header from '../components/header';
 import Footer from '../components/footer';
@@ -11,6 +11,7 @@ const BookingPage = () => {
     lastName: '',
     email: '',
     phoneNumber: '',
+    whereTo: '',
     pickupLocation: '',
     activityLanguage: '',
     promoCode: '',
@@ -48,6 +49,7 @@ const BookingPage = () => {
         <p>Last Name: ${formData.lastName}</p>
         <p>Email: ${formData.email}</p>
         <p>Phone Number: ${formData.phoneNumber}</p>
+        <p>Phone Number: ${formData.whereTo}</p>
         <p>Pickup Location: ${formData.pickupLocation}</p>
         <p>Activity Language: ${formData.activityLanguage}</p>
         <p>Promo Code: ${formData.promoCode}</p>
@@ -117,11 +119,13 @@ const BookingPage = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-gray-100">
       <Header />
       <div className="flex-grow container mx-auto py-8">
-        <h1 className="text-3xl font-bold mb-4 flex justify-center mb-8">Book Your Experience</h1>
-        {renderStep()}
+        <h1 className="text-3xl font-bold mb-8 flex justify-center">Book Your Experience</h1>
+        <div className="bg-white p-8 rounded-lg shadow-md max-w-lg mx-auto bg-pattern">
+          {renderStep()}
+        </div>
       </div>
       <Footer />
     </div>
@@ -130,7 +134,7 @@ const BookingPage = () => {
 
 const Step1 = ({ formData, handleChange, handleNextStep }) => {
   return (
-    <form onSubmit={handleNextStep} className="max-w-lg mx-auto space-y-4">
+    <form onSubmit={handleNextStep} className="space-y-4">
       <div className="mb-6">
         <label htmlFor="date" className="block text-sm font-medium text-gray-700">Select Date:</label>
         <input type="date" id="date" name="date" value={formData.date} onChange={handleChange} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
@@ -146,7 +150,7 @@ const Step1 = ({ formData, handleChange, handleNextStep }) => {
 
 const Step2 = ({ formData, handleChange, handleNextStep, handlePreviousStep }) => {
   return (
-    <form onSubmit={handleNextStep} className="max-w-lg mx-auto space-y-4">
+    <form onSubmit={handleNextStep} className="space-y-4">
       <div className="mb-6">
         <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">First Name:</label>
         <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
@@ -164,6 +168,10 @@ const Step2 = ({ formData, handleChange, handleNextStep, handlePreviousStep }) =
         <input type="tel" id="phoneNumber" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
       </div>
       <div className="mb-6">
+        <label htmlFor="whereTo" className="block text-sm font-medium text-gray-700">Where to?</label>
+        <input type="text" id="whereTo" name="whereTo" value={formData.whereTo} onChange={handleChange} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
+      </div>
+      <div className="mb-6">
         <label htmlFor="pickupLocation" className="block text-sm font-medium text-gray-700">Pickup Location:</label>
         <input type="text" id="pickupLocation" name="pickupLocation" value={formData.pickupLocation} onChange={handleChange} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
       </div>
@@ -175,9 +183,9 @@ const Step2 = ({ formData, handleChange, handleNextStep, handlePreviousStep }) =
         <label htmlFor="promoCode" className="block text-sm font-medium text-gray-700">Promo Code:</label>
         <input type="text" id="promoCode" name="promoCode" value={formData.promoCode} onChange={handleChange} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
       </div>
-      <div className="flex justify-between">
-        <button type="button" onClick={handlePreviousStep} className="w-1/2 bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600">Previous</button>
-        <button type="submit" className="w-1/2 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Next</button>
+      <div className="flex justify-between mt-4">
+        <button type="button" onClick={handlePreviousStep} className="w-1/3 bg-gray-500 text-white px-2 py-2 rounded-md hover:bg-gray-600">Previous</button>
+        <button type="submit" className="w-1/3 bg-blue-500 text-white px-2 py-2 rounded-md hover:bg-blue-600">Next</button>
       </div>
     </form>
   );
@@ -185,15 +193,15 @@ const Step2 = ({ formData, handleChange, handleNextStep, handlePreviousStep }) =
 
 const Step3 = ({ formData, handleChange, handleNextStep, handlePreviousStep, handleSubmit }) => {
   return (
-    <form onSubmit={handleSubmit} className="max-w-lg mx-auto space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-4">
       <div className="mb-6">
         <label htmlFor="cardNumber" className="block text-sm font-medium text-gray-700">Card Number:</label>
         <input type="text" id="cardNumber" name="cardNumber" value={formData.cardNumber} onChange={handleChange} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
       </div>
-      <div className="mb-6">
+      {/* <div className="mb-6">
         <label htmlFor="cvc" className="block text-sm font-medium text-gray-700">CVC:</label>
         <input type="text" id="cvc" name="cvc" value={formData.cvc} onChange={handleChange} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
-      </div>
+      </div> */}
       <div className="mb-6">
         <label htmlFor="nameOnCard" className="block text-sm font-medium text-gray-700">Name on Card:</label>
         <input type="text" id="nameOnCard" name="nameOnCard" value={formData.nameOnCard} onChange={handleChange} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
@@ -202,9 +210,9 @@ const Step3 = ({ formData, handleChange, handleNextStep, handlePreviousStep, han
         <label htmlFor="expiryDate" className="block text-sm font-medium text-gray-700">Expiry Date:</label>
         <input type="text" id="expiryDate" name="expiryDate" value={formData.expiryDate} onChange={handleChange} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
       </div>
-      <div className="flex justify-between">
-        <button type="button" onClick={handlePreviousStep} className="w-1/2 bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600">Previous</button>
-        <button type="submit" className="w-1/2 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Book</button>
+      <div className="flex justify-between mt-4">
+        <button type="button" onClick={handlePreviousStep} className="w-1/3 bg-gray-500 text-white px-2 py-2 rounded-md hover:bg-gray-600">Previous</button>
+        <button type="submit" className="w-1/3 bg-blue-500 text-white px-2 py-2 rounded-md hover:bg-blue-600">Book</button>
       </div>
     </form>
   );

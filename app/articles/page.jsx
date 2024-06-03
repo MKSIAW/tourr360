@@ -8,10 +8,12 @@ const ExplorePage = () => {
     <div>
       <Header/>
       <div className="container mx-auto py-8">
+
+
       <div className="text-center mt-4 font-arial">
-            <h2 className="text-4xl font-semibold mb-4">Food and Drink</h2>
-            <p className="text-3xl-gray-600  ">Dig into the best restaurants and bars, street food, and culinary hotspots around the world.</p>
-            <p className="text-3xl-gray-600 mb-2">Who's Hungry?</p>
+            <h2 className="text-4xl font-semibold mb-10">Ghana's Best Hotel for 2024</h2>
+            <p className="text-3xl-gray-600  ">See Our Tourist Choice</p>
+            
           </div>
 
 
@@ -19,19 +21,19 @@ const ExplorePage = () => {
           <div className="container mx-auto flex flex-col sm:flex-row items-center">
             
             <div className="w-full sm:w-2/3 mb-4 sm:mb-0">
-              <Link href="/foodanddrink">
-              <img src="/images/food.jpg" alt="Food Placeholder 1" className="w-full h-[40rem] rounded-lg mb-0" />
+              <Link href="/hotels">
+              <img src="/images/kempinski.jpg" alt="Food Placeholder 1" className="w-full h-[40rem] rounded-lg mb-0" />
               </Link>
             </div>
             <div className="w-full sm:w-1/3 flex flex-col justify-between sm:ml-4">
               <div className="w-full mb-4">
-              <Link href="/foodanddrink">
-                <img src="/images/drink.avif" alt="Food Placeholder 2" className="w-full rounded-lg mb-4" />
+              <Link href="/hotels">
+                <img src="/images/marriot.jpg" alt="Food Placeholder 2" className="w-full rounded-lg mb-4" />
                 </Link>
               </div>
               <div className="w-full">
-              <Link href="/foodanddrink">
-                <img src="/images/restaurant.webp" alt="Food Placeholder 3" className="w-full rounded-lg" />
+              <Link href="/hotels">
+                <img src="/images/movenpick.jpg" alt="Food Placeholder 3" className="w-full rounded-lg" />
                 </Link>
               </div>
             </div>
