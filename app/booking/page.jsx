@@ -1,8 +1,8 @@
 'use client'
-
+import React, { useState, useEffect } from 'react';
 import Header from '../components/header';
 import Footer from '../components/footer';
-import React, { useState, useEffect } from 'react';
+
 
 const BookingPage = () => {
   const [formData, setFormData] = useState({
@@ -22,7 +22,9 @@ const BookingPage = () => {
     expiryDate: ''
   });
 
-  const [availability, setAvailability] = useState(''); // State to store availability status
+  const [availability, setAvailability] = useState({ available: false });
+
+ 
 
   useEffect(() => {
     // Fetch availability data when the date changes
@@ -108,6 +110,7 @@ const BookingPage = () => {
             formData={formData}
             handleChange={handleChange}
             handleNextStep={handleNextStep}
+            availability={availability}
           />
         );
       case 2:
@@ -117,6 +120,7 @@ const BookingPage = () => {
             handleChange={handleChange}
             handleNextStep={handleNextStep}
             handlePreviousStep={handlePreviousStep}
+            
           />
         );
       case 3:
@@ -134,25 +138,21 @@ const BookingPage = () => {
     }
   };
 
-  
-    return (
-      <div className="flex flex-col min-h-screen bg-gray-100">
-        <Header />
-        <div className="flex-grow container mx-auto py-8">
-          <h1 className="text-3xl font-bold mb-8 flex justify-center">Book Your Experience</h1>
-          <div className="bg-white p-8 rounded-lg shadow-md max-w-lg mx-auto" style={{ backgroundImage: 'url(/path-to-your-pattern-image.png)', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
-            <Step1
-              formData={formData}
-              handleChange={handleChange}
-              handleNextStep={handleNextStep}
-              availability={availability}
-            />
-          </div>
+  return (
+    <div className="flex flex-col min-h-screen bg-gray-100">
+      <Header />
+      <div className="flex-grow container mx-auto py-8">
+        <h1 className="text-3xl font-bold mb-8 flex justify-center">Book Your Experience</h1>
+        <div className="bg-white p-8 rounded-lg shadow-md max-w-lg mx-auto" >
+       
+          {renderStep()}
         </div>
-        <Footer />
       </div>
-    );
-  };
+      <Footer />
+    </div>
+  );
+};
+
 const Step1 = ({ formData, handleChange, handleNextStep, availability }) => {
   const isDateAvailable = availability && availability.available;
 
@@ -162,15 +162,17 @@ const Step1 = ({ formData, handleChange, handleNextStep, availability }) => {
         <label htmlFor="date" className="block text-sm font-medium text-gray-700">Select Date:</label>
         <input type="date" id="date" name="date" value={formData.date} onChange={handleChange} className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500 ${availability && availability.available ? 'border-green-500' : 'border-red-500'}`} />
       </div>
-      {availability && (
-        <div className="text-sm mb-4">
-          {availability.available ? (
-            <span className="text-green-500">Available</span>
-          ) : (
-            <span className="text-red-500">Not Available</span>
-          )}
-        </div>
-      )}
+     
+     {availability && (
+      <div className="text-sm mb-4">
+        {availability.available ? (
+          <span className="text-green-500">Available</span>
+        ) : (
+          <span className="text-red-500">Not Available</span>
+        )}
+      </div>
+    )}
+    
       <div className="mb-6">
         <label htmlFor="guests" className="block text-sm font-medium text-gray-700">Number of Guests:</label>
         <input type="number" id="guests" name="guests" value={formData.guests} onChange={handleChange} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
@@ -179,7 +181,6 @@ const Step1 = ({ formData, handleChange, handleNextStep, availability }) => {
     </form>
   );
 };
-
 
 const Step2 = ({ formData, handleChange, handleNextStep, handlePreviousStep }) => {
   return (
@@ -231,10 +232,7 @@ const Step3 = ({ formData, handleChange, handleNextStep, handlePreviousStep, han
         <label htmlFor="cardNumber" className="block text-sm font-medium text-gray-700">Card Number:</label>
         <input type="text" id="cardNumber" name="cardNumber" value={formData.cardNumber} onChange={handleChange} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
       </div>
-      <div className="mb-6">
-        <label htmlFor="cvc" className="block text-sm font-medium text-gray-700">CVC:</label>
-        <input type="text" id="cvc" name="cvc" value={formData.cvc} onChange={handleChange} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
-      </div>
+      
       <div className="mb-6">
         <label htmlFor="nameOnCard" className="block text-sm font-medium text-gray-700">Name on Card:</label>
         <input type="text" id="nameOnCard" name="nameOnCard" value={formData.nameOnCard} onChange={handleChange} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
