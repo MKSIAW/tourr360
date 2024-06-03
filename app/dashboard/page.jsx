@@ -1,4 +1,5 @@
 'use client'
+
 import Link from 'next/link';
 import Head from 'next/head';
 import axios from 'axios';
@@ -151,14 +152,14 @@ const Dashboard = () => {
       <Header />
 
       {/* Filters Section */}
-      <div className="flex bg-white p-4 space-x-4">
+      <div className="flex flex-col md:flex-row bg-white p-4 space-y-4 md:space-y-0 md:space-x-4">
         <LocationFilter onFilterChange={handleFilterChange} />
         <CategoryFilter onFilterChange={handleFilterChange} />
         <PriceRangeFilter onFilterChange={handleFilterChange} />
       </div>
 
       {/* Main Content */}
-      <main className="flex-grow p-10">
+      <main className="flex-grow p-4 md:p-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {filteredSites.map((site) => (
             <Link key={site.id} href={`/VirtualTour/`}>
@@ -167,8 +168,7 @@ const Dashboard = () => {
                 <div className="p-4">
                   <h3 className="text-lg font-semibold mb-2">{site.name}</h3>
                   <p className="text-sm">{site.location}</p>
-                  {/* Remove category display */}
-                  {site.price && <p className="text-sm">{site.price}</p>} {/* Display price if available */}
+                  {site.price && <p className="text-sm">{site.price}</p>}
                 </div>
               </div>
             </Link>
