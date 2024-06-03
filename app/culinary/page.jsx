@@ -8,62 +8,57 @@ const Page = () => {
     <Header/>
     <div className="max-w-4xl mx-auto px-4 py-8">
       <header className="text-center mb-8">
-        <h1 className="text-3xl font-bold mb-4">5 Best Hiking Trails for Summer</h1>
+        <h1 className="text-3xl font-bold mb-4">Exploring Ghanaian Cuisine: A Culinary Adventure</h1>
         <p className="text-gray-600">By Explorer • May 31, 2024 • 8 minutes read</p>
       </header>
       <section className="mb-8">
       <img
-  src="/images/hiking2.avif" alt="Aerial view of Kauai island coastline and mountains"className="max-w-screen-1xl mx-auto mb-4"
+  src="/images/cuisine2.webp" alt="Aerial view of Kauai island coastline and mountains"className="max-w-screen-1xl mx-auto mb-4"
 />
 
         <p className="text-lg leading-relaxed">
-        Accra, the vibrant capital of Ghana, is not only known for its beaches and cultural landmarks but also for its scenic hiking trails. For outdoor enthusiasts and nature lovers, the city's surrounding landscapes offer several opportunities for hiking and exploration. Here are a few top spots for hiking around Accra:
+        Dive into the vibrant flavors and rich heritage of Ghanaian cuisine with us! From aromatic soups to spicy stews, join our culinary journey through the heart of West Africa. Discover the ingredients, traditions, and stories that make Ghanaian food a true delight for the senses. Get ready to tantalize your taste buds and expand your culinary horizons!
         </p>
       </section>
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">1. Nkawkaw Cocoa farm</h2>
-        <img src="/images/nkawkaw.jpg" alt="Aerial view of oceanfront resort with pools and lush grounds" className="w-full mb-4" />
+        <h2 className="text-2xl font-bold mb-4">1. Okra</h2>
+        <img src="/images/okra.webp" alt="Aerial view of oceanfront resort with pools and lush grounds" className="w-full mb-4" />
         <p className="text-lg leading-relaxed">
-        Nestled in the Eastern Region of Ghana, the Nkawkaw Cocoa Farms offer a unique and enriching hiking experience. Just a few hours' drive from Accra, this hike takes you through lush cocoa plantations and beautiful natural landscapes.</p>
-
-        <p className="text-lg leading-relaxed"> As you step inside the Country Club, you’ll be greeted by a warm and inviting atmosphere. The interior is sleek and stylish, with contemporary furnishings and a vibrant color scheme that adds a touch of energy to the space.</p>
+        Also known as "lady's fingers," okra is a vegetable commonly used in Ghanaian cuisine to add texture and thickness to soups and stews. It is prized for its mucilaginous properties, which help to thicken dishes like okra soup and groundnut soup, while also contributing a unique flavor.</p>
         
         
       </section>
       <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">2. E3P - Bamboo Forest</h2>
-          <img src="/images/bamboo.jpg" alt="santoku" className="w-full mb-4" />
+          <h2 className="text-2xl font-bold mb-4">2. Palm Oil</h2>
+          <img src="/images/palmoil.webp" alt="santoku" className="w-full mb-4" />
           <p className="text-lg leading-relaxed">
-          Nice hike through rubber plantations into the forest to the bamboo cathedral.
-The loop in the middle leads to a destilery and can be omitted if you want to go straight.
-The trail has been logged on the way back.
+          Palm oil is a staple cooking oil in Ghanaian cuisine, prized for its vibrant color and distinct flavor. It is derived from the fruit of the oil palm tree and is widely used in frying, sautéing, and as a base for soups and stews. Palm oil adds richness and depth to dishes, as well as a characteristic reddish-orange hue.
           </p>
           
         </section>
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">3. Aburi</h2>
-          <img src="/images/aburiwalk.jpg" alt="The Green Leaf Cafe" className="w-full mb-4" />
+          <h2 className="text-2xl font-bold mb-4">3. Cloves</h2>
+          <img src="/images/cloves.webp" alt="The Green Leaf Cafe" className="w-full mb-4" />
           <p className="text-lg leading-relaxed">
-          A great walk to explore town and near by villages. Stumbled across a stunning waterfall which the locals confirmed its all year round
+          Cloves are aromatic flower buds commonly used as a spice in Ghanaian cooking to add depth and warmth to dishes. They have a strong, sweet, and slightly bitter flavor profile, with hints of both sweetness and spiciness. Cloves are often used whole or ground in spice blends, marinades, and sauces.
           </p>
          
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">4. Wli Agumatsa Falls</h2>
-          <img src="/images/wli.jpg" alt="The Green Leaf Cafe" className="w-full mb-4" />
+          <h2 className="text-2xl font-bold mb-4">4. Yam</h2>
+          <img src="/images/yam.webp" alt="The Green Leaf Cafe" className="w-full mb-4" />
           <p className="text-lg leading-relaxed">
-          Easy hike to Hohoe's largest waterfall, you will pass by 9 man-made bridges until you reach the beautiful waterfall where you can go in and take a picture under it, water depth reach a maximum of 1.5 meters.
+          Yam is a starchy tuber widely consumed in Ghana and is a versatile ingredient in Ghanaian cuisine. It can be boiled, fried, mashed, or roasted and is used in a variety of dishes, including yam fufu, yam chips, and yam porridge. Yam is prized for its hearty texture and mild flavor.
           </p>
          
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">5. Lou Moon Family hike</h2>
-          <img src="/images/lou.avif" alt="The Green Leaf Cafe" className="w-full mb-4" />
+          <h2 className="text-2xl font-bold mb-4">5. Black-eyed Peas</h2>
+          <img src="/images/beans.webp" alt="The Green Leaf Cafe" className="w-full mb-4" />
           <p className="text-lg leading-relaxed">
-          45 minutes per way through forest, fields and along the sea.
-GPS reception was not very precise but the trail is easy to find.
+          Black-eyed peas, also known as beans, are a type of legume commonly used in Ghanaian cuisine for their nutty flavor and creamy texture. They are often cooked in stews, soups, and rice dishes, such as waakye, a popular Ghanaian rice and beans dish. Black-eyed peas are also a good source of protein and fiber in Ghanaian cooking.
           </p>
          
         </section>

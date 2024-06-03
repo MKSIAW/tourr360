@@ -8,62 +8,57 @@ const Page = () => {
     <Header/>
     <div className="max-w-4xl mx-auto px-4 py-8">
       <header className="text-center mb-8">
-        <h1 className="text-3xl font-bold mb-4">5 Best Hiking Trails for Summer</h1>
+        <h1 className="text-3xl font-bold mb-4">Must-Try Street Food in Ghana: A flavorful Journey</h1>
         <p className="text-gray-600">By Explorer • May 31, 2024 • 8 minutes read</p>
       </header>
       <section className="mb-8">
       <img
-  src="/images/hiking2.avif" alt="Aerial view of Kauai island coastline and mountains"className="max-w-screen-1xl mx-auto mb-4"
+  src="/images/kosua.webp" alt="Aerial view of Kauai island coastline and mountains"className="max-w-screen-1xl mx-auto mb-4"
 />
 
         <p className="text-lg leading-relaxed">
-        Accra, the vibrant capital of Ghana, is not only known for its beaches and cultural landmarks but also for its scenic hiking trails. For outdoor enthusiasts and nature lovers, the city's surrounding landscapes offer several opportunities for hiking and exploration. Here are a few top spots for hiking around Accra:
+        Ghana is a treasure trove of vibrant street food that showcases its rich culinary heritage. When you find yourself in this West African gem, don’t miss out on these must-try delights:
         </p>
       </section>
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">1. Nkawkaw Cocoa farm</h2>
-        <img src="/images/nkawkaw.jpg" alt="Aerial view of oceanfront resort with pools and lush grounds" className="w-full mb-4" />
+        <h2 className="text-2xl font-bold mb-4">1. Waakye</h2>
+        <img src="/images/waakye.webp" alt="Aerial view of oceanfront resort with pools and lush grounds" className="w-full mb-4" />
         <p className="text-lg leading-relaxed">
-        Nestled in the Eastern Region of Ghana, the Nkawkaw Cocoa Farms offer a unique and enriching hiking experience. Just a few hours' drive from Accra, this hike takes you through lush cocoa plantations and beautiful natural landscapes.</p>
-
-        <p className="text-lg leading-relaxed"> As you step inside the Country Club, you’ll be greeted by a warm and inviting atmosphere. The interior is sleek and stylish, with contemporary furnishings and a vibrant color scheme that adds a touch of energy to the space.</p>
+        A beloved staple, Waakye is a hearty dish of rice and beans cooked with millet leaves, giving it a distinctive color. It’s typically served with a variety of accompaniments such as fried plantains, boiled eggs, fish, meat, and shito (a spicy black pepper sauce). This meal is a flavor explosion in every bite.</p>
         
         
       </section>
       <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">2. E3P - Bamboo Forest</h2>
-          <img src="/images/bamboo.jpg" alt="santoku" className="w-full mb-4" />
+          <h2 className="text-2xl font-bold mb-4">2. Chinchinga</h2>
+          <img src="/images/khebab.jpg" alt="santoku" className="w-full mb-4" />
           <p className="text-lg leading-relaxed">
-          Nice hike through rubber plantations into the forest to the bamboo cathedral.
-The loop in the middle leads to a destilery and can be omitted if you want to go straight.
-The trail has been logged on the way back.
+          Known as Ghanaian kebabs, Chinchinga are skewered and grilled pieces of spicy meat, usually beef or chicken. The meat is marinated in a blend of spices and grilled over open flames, resulting in a smoky, savory treat that's a favorite among locals and visitors alike.
           </p>
           
         </section>
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">3. Aburi</h2>
-          <img src="/images/aburiwalk.jpg" alt="The Green Leaf Cafe" className="w-full mb-4" />
+          <h2 className="text-2xl font-bold mb-4">3. Kosua ne Meko</h2>
+          <img src="/images/meko.avif" alt="The Green Leaf Cafe" className="w-full mb-4" />
           <p className="text-lg leading-relaxed">
-          A great walk to explore town and near by villages. Stumbled across a stunning waterfall which the locals confirmed its all year round
+          Kosua ne Meko, a delightful combination of grilled goat meat and roasted plantains, is a popular street food in Ghana. The smoky flavor of the grilled goat meat perfectly complements the sweetness of the roasted plantains, creating a harmonious blend of flavors that’s simply irresistible.
           </p>
          
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">4. Wli Agumatsa Falls</h2>
-          <img src="/images/wli.jpg" alt="The Green Leaf Cafe" className="w-full mb-4" />
+          <h2 className="text-2xl font-bold mb-4">4. Koko and Koose</h2>
+          <img src="/images/koko.jpg" alt="The Green Leaf Cafe" className="w-full mb-4" />
           <p className="text-lg leading-relaxed">
-          Easy hike to Hohoe's largest waterfall, you will pass by 9 man-made bridges until you reach the beautiful waterfall where you can go in and take a picture under it, water depth reach a maximum of 1.5 meters.
+          Koko is a spiced millet porridge often enjoyed for breakfast. It’s mildly spicy and slightly tangy, making it a warming start to the day. Koose, deep-fried black-eyed pea fritters, are the perfect accompaniment. Together, they offer a delicious and nutritious morning meal.
           </p>
          
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">5. Lou Moon Family hike</h2>
-          <img src="/images/lou.avif" alt="The Green Leaf Cafe" className="w-full mb-4" />
+          <h2 className="text-2xl font-bold mb-4">5. Banku and Tilapia</h2>
+          <img src="/images/banku.jpg" alt="The Green Leaf Cafe" className="w-full mb-4" />
           <p className="text-lg leading-relaxed">
-          45 minutes per way through forest, fields and along the sea.
-GPS reception was not very precise but the trail is easy to find.
+          Banku is a fermented corn and cassava dough that’s cooked into a smooth, stretchy texture. It’s often paired with grilled tilapia that’s been marinated with spices and grilled to perfection. Served with a side of pepper sauce, this dish is a must-try for any seafood lover.
           </p>
          
         </section>
